@@ -1,1 +1,4 @@
-@import url("/css/global/color_test.css");
+@import url("/src/css/components/center.css");
+@import url("/src/css/components/topBar.css");
+@import url("/src/css/components/SideBar.css");
+@import url("/src/css/global/boilerplate.css");
