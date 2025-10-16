@@ -30,7 +30,6 @@
   --color-text-primary: var(--color-neutral);
   --color-text-secondary: var(--color-neutral-muted);
   --color-text-on-primary: hsl(0, 0%, 100%);
-  --color-text-on-accent: hsl(0, 0%, 100%);
 
   /* ====== BACKGROUND COLORS ====== */
   --color-bg: var(--color-neutral-soft);
@@ -44,33 +43,32 @@
   --duration-slow: 240ms;
 }
 
-.button {
-  font-size: var(--fs-7);
-  font-weight: 700;
-  line-height: 1.5;
-  border-radius: 28px;
-  padding: 10.5px 24px;
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /*content + margin + padding + border all add up to specified height and width*/
 }
 
-.button.primary {
-  background: var(--color-primary);
-  color: var(--color-text-primary);
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 800;
+  line-height: 1.2;
 }
 
-.button.accent {
-  background: var(--color-accent);
-  color: var(--color-text-accent);
+a {
+  text-decoration: none;
 }
 
-.button.neutral {
-  background: var(--color-neutral);
-  color: var(--color-text-on-accent);
+body {
+  margin: 0;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 500;
 }
 
-.button.other {
-  color: var(--color-text-primary);
-}
-
-.button.gradient {
-  background: var(--gradient-card-sheen);
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
