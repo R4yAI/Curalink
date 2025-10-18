@@ -1,4 +1,5 @@
 @import url("/src/css/components/center.css");
-@import url("/src/css/components/topBar.css");
-@import url("/src/css/components/SideBar.css");
+@import url("/src/css/components/sidebar.css");
+@import url("/src/css/components/navbar.css");
 @import url("/src/css/global/boilerplate.css");
+@import url("/src/css/global/fonts.css");
