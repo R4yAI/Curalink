@@ -1,0 +1,75 @@
+:root {
+  /* ====== BRAND COLORS ====== */
+  --color-primary: hsl(162, 60%, 42%);
+  --color-primary-hover: hsl(162, 62%, 37%);
+  --color-primary-active: hsl(162, 66%, 33%);
+  --color-primary-soft: hsl(162, 60%, 92%);
+  --color-primary-outline: hsl(162, 60%, 70%);
+
+  --color-accent: hsl(208, 85%, 55%);
+  --color-accent-hover: hsl(208, 88%, 50%);
+  --color-accent-soft: hsl(208, 85%, 94%);
+
+  --color-neutral: hsl(220, 10%, 16%);
+  --color-neutral-muted: hsl(220, 8%, 38%);
+  --color-neutral-soft: hsl(220, 12%, 96%);
+
+  /* ====== GRADIENTS ====== */
+  --gradient-hero: linear-gradient(
+    135deg,
+    hsl(162, 60%, 42%) 0%,
+    hsl(208, 85%, 55%) 100%
+  );
+  --gradient-card-sheen: linear-gradient(
+    180deg,
+    hsla(162, 60%, 42%, 0.08) 0%,
+    hsla(162, 60%, 42%, 0) 100%
+  );
+
+  /* ====== TEXT COLORS ====== */
+  --color-text-black: var(--color-neutral);
+  --color-text-gray: var(--color-neutral-muted);
+  --color-text-white: hsl(0, 0%, 100%);
+
+  /* ====== BACKGROUND COLORS ====== */
+  --color-bg: var(--color-neutral-soft);
+  --color-bg-card: var(--color-primary-soft);
+  --color-bg-hero: var(--gradient-hero);
+  --color-bg-white: hsl(0, 0%, 100%);
+
+  /* ====== TRANSITIONS ====== */
+  --ease-default: cubic-bezier(0.2, 0.9, 0.3, 1);
+  --duration-fast: 120ms;
+  --duration-default: 180ms;
+  --duration-slow: 240ms;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /*content + margin + padding + border all add up to specified height and width*/
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
