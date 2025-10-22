@@ -27,9 +27,9 @@
   );
 
   /* ====== TEXT COLORS ====== */
-  --color-text-primary: var(--color-neutral);
-  --color-text-secondary: var(--color-neutral-muted);
-  --color-text-on-primary: hsl(0, 0%, 100%);
+  --color-text-black: var(--color-neutral);
+  --color-text-gray: var(--color-neutral-muted);
+  --color-text-white: hsl(0, 0%, 100%);
 
   /* ====== BACKGROUND COLORS ====== */
   --color-bg: var(--color-neutral-soft);
