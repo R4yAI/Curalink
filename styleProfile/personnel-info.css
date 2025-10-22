@@ -1,0 +1,90 @@
+
+
+.personnel-info{
+  background-color: rgb(254, 254, 254);
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  align-content: center;
+  position: relative;
+  left:5px;
+  width: 250px;
+ padding-left: 10px;
+ padding-right: 10px;
+}
+img{
+  width: 100%;
+}
+.personne-info-picture{
+    background-color: rgb(232, 231, 231);
+    border-radius: 50%; 
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 0px;
+    width: 100px;     
+    height: 100px;
+    overflow: hidden;   /* coupe ce qui dépasse du rond */
+    align-self: center; /* centre dans le conteneur */
+}
+.personne-info-element{
+    background-color: rgb(246, 245, 244);
+    border-radius: 20px;
+    margin: 5px;
+    text-align: center;
+     align-content: left;
+     padding: 10px;
+     
+}
+.personne-info-block{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.personne-info-name{
+    border-radius: 20px;
+    margin: 5px;
+    text-align: center;
+    align-content: left;
+    display: block;
+    margin-right: 55px;
+   
+}
+
+.personne-info-state{
+    color: rgb(28, 134, 31);
+    border-radius: 20px;
+    border-color:  rgb(28, 134, 31);
+    margin: 5px;
+    margin-left: 50px;
+    text-align: center;
+    align-content: left;
+     padding: 5px;
+     width: fit-content;
+    display: block;
+}
+.profile-button {
+  background-color: #009688;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+}
+
+
+.profile-button:hover {
+    background-color: rgb(162, 190, 190);
+      letter-spacing: 3px;
+    box-shadow: rgb(178, 228, 193) 0px 7px 29px 0px;
+    transition: 100ms;
+}
+
