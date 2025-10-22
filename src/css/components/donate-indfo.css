@@ -127,3 +127,29 @@ p ,
 h5{
   color:#666;
 }
+
+
+@media (max-width:700px){
+  /*   donate block */
+  .donate-info{
+    width: 100% ;
+    flex:1;
+   right: 0;
+   left:0;
+    transition: all 0.3s ease;
+  } 
+  .statistics {
+    flex-direction: column ;
+    align-items: center;
+    gap:30px;
+
+  }
+  .stat-card{
+    height: 100px;
+  }
+
+.profile-container{
+      flex-wrap: wrap;
+}
+  
+}
