@@ -1,0 +1,13 @@
+.center-top{
+    background-color:white;
+    flex-direction: column;
+    position: relative;
+
+    top:70px;
+    padding-left: 20px;
+    padding-bottom: 0;
+   
+}
+.ligne1{
+padding-top:10px;
+}
