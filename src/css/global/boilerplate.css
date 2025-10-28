@@ -17,9 +17,16 @@
   /* ====== GRADIENTS ====== */
   --gradient-hero: linear-gradient(
     135deg,
-    hsl(162, 60%, 42%) 0%,
+    hsl(177, 69%, 41%) 0%,
     hsl(208, 85%, 55%) 100%
   );
+
+  --gradient-green: linear-gradient(
+    90deg,
+    hsl(155, 67%, 45%) 0%,
+    hsl(172, 65%, 39%) 100%
+  );
+
   --gradient-card-sheen: linear-gradient(
     180deg,
     hsla(162, 60%, 42%, 0.08) 0%,
@@ -72,4 +79,9 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.main-content {
+  padding-top: 50px;
+  padding-left: 270px;
 }
