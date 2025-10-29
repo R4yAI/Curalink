@@ -1,0 +1,360 @@
+.main-content {
+  flex: 1;
+  background: #fffdf0;
+  padding-inline-start: 280px;
+  padding-block-start: 60px;
+}
+
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+
+.page-title i {
+  color: #008b8b;
+  font-size: 1.8rem;
+}
+
+.page-subtitle {
+  color: #444444;
+  font-size: 1.1rem;
+}
+
+.search-add-section {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.search-container {
+  position: relative;
+  flex: 1;
+  max-width: 400px;
+}
+
+.search-container i {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 3rem;
+  border: 2px solid #cccccc;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: white;
+  transition: none;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #7fb3ff;
+}
+
+.btn-add {
+  background: #7fdc8a;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: none;
+  white-space: nowrap;
+}
+
+.btn-add:hover {
+  background: #66c972;
+}
+
+.medicines-section {
+  margin-top: 2rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 1.5rem;
+}
+
+/* medecines */
+.medicines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1.5rem;
+}
+
+.medicine-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: none;
+  border: 1px solid #dddddd;
+  overflow: hidden;
+  transition: none;
+}
+
+.medicine-card:hover {
+  /* maybe later */
+}
+
+.card-toggle {
+  display: none;
+}
+
+.card-header {
+  display: block;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.card-header:hover {
+  background: #f2f2f2;
+}
+
+.medicine-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.medicine-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 0.25rem;
+}
+
+.medicine-category {
+  background: #fff0f5;
+  color: #cc3366;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500; /* thickness */
+}
+
+.medicine-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #555555;
+  font-size: 0.9rem;
+}
+
+.detail-item i {
+  width: 16px;
+  color: #888888;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.status-badge.available {
+  background: #e0ffe0;
+  color: #006600;
+}
+
+.status-badge.matched {
+  background: #e0f0ff;
+  color: #0044aa;
+}
+
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.action-btn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  font-size: 0.875rem;
+}
+
+.action-btn.edit {
+  background: #fff4cc;
+  color: #aa7700;
+}
+
+.action-btn.edit:hover {
+  background: #ffe799;
+}
+
+.action-btn.delete {
+  background: #ffd6d6;
+  color: #cc0000;
+}
+
+.action-btn.delete:hover {
+  background: #ffb3b3;
+}
+
+/* the table of donations */
+.card-expanded {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: #f9f9f9;
+  border-top: 1px solid #eeeeee;
+}
+
+.card-toggle:checked + .card-header + .card-expanded {
+  max-height: 500px;
+}
+
+.donors-section {
+  padding: 1.5rem;  /* need to be changed  */
+}
+
+.donors-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.donors-title i {
+  color: #008b8b;
+}
+
+.donors-table {
+  overflow-x: auto;
+}
+
+.donors-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.donors-table th {
+  background: #f2f2f2;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #222222;
+  border-bottom: 1px solid #dddddd;
+  font-size: 0.875rem;
+}
+
+.donors-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #eeeeee;
+  vertical-align: middle;
+}
+
+.donors-table tr:last-child td {
+  border-bottom: none;
+}
+
+.donor-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.donor-avatar {
+  width: 32px;
+  height: 32px;
+  background: #ffa07a;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+.status-active {
+  background: #e0ffe0;
+  color: #006600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-pending {
+  background: #fff4cc;
+  color: #aa7700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-matched {
+  background: #e0f0ff;
+  color: #0044aa;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+
+/* animation for the table */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-expanded {
+  animation: slideDown 0.3s ease;
+}
+

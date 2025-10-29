@@ -4,13 +4,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/src/css/style.css">
     <title>Requests</title>
   </head>
 
@@ -64,5 +65,376 @@
     </nav>
 
     <script src="/src/JS/highlightnav.js"></script>
+
+    <!-- ************************************************* -->
+   
+        <main class="main-content">
+            <div class="page-header">
+                <h1 class="page-title">
+                    <i class="fas fa-pills"></i>
+                    Medicines Management
+                </h1>
+                <p class="page-subtitle">Manage your donated medicines and track their status.</p>
+            </div>
+
+            <div class="search-add-section">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search medicines..." class="search-input">
+                </div>
+                <button class="btn-add">
+                    <i class="fas fa-plus"></i>
+                    Add Medicine
+                </button>
+            </div>
+
+            <div class="medicines-section">
+  
+              <h2 class="section-title">Your Medicines</h2>
+  
+  
+              <div class="medicines-grid">
+                    
+                    <!-- Medicine Card 1 -->
+                    <div class="medicine-card">
+                        <input type="checkbox" id="medicine-1" class="card-toggle">
+                        <label for="medicine-1" class="card-header">
+                            <div class="medicine-info">
+                                <h3 class="medicine-name">Paracetamol 500mg</h3>
+                                <span class="medicine-category">Pain Relief</span>
+                            </div>
+                            <div class="medicine-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-cube"></i>
+                                    <span>50 tablets</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>2026-03-15</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Sealed</span>
+                                </div>
+                            </div>
+                            <div class="status-badge available">
+                                <i class="fas fa-check-circle"></i>
+                                Available
+                            </div>
+                            <div class="card-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </label>
+                        <!-- the table -->
+                        <div class="card-expanded">
+                            <div class="donors-section">
+                                <h4 class="donors-title">
+                                    <i class="fas fa-users"></i>
+                                    Donors for this Medicine
+                                </h4>
+                                <div class="donors-table">
+                                    <table>
+                                        <thead>
+                                          <tr>
+                                                <th>Donor Name</th>
+                                                <th>Quantity Donated</th>
+                                                <th>Date Donated</th>
+                                                <th>Contact</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="donor-info">
+                                                        <div class="donor-avatar">JD</div>
+                                                        <span>John Doe</span>
+                                                    </div>
+                                                </td>
+                                                <td>25 tablets</td>
+                                                <td>2024-01-15</td>
+                                                <td>john.doe@email.com</td>
+                                                <td><span class="status-active">Active</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="donor-info">
+                                                        <div class="donor-avatar">MS</div>
+                                                        <span>Maria Smith</span>
+                                                    </div>
+                                                </td>
+                                                <td>25 tablets</td>
+                                                <td>2024-01-10</td>
+                                                <td>maria.smith@email.com</td>
+                                                <td><span class="status-pending">Pending</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Medicine Card 2 -->
+                    <div class="medicine-card">
+                        <input type="checkbox" id="medicine-1" class="card-toggle">
+                        <label for="medicine-1" class="card-header">
+                            <div class="medicine-info">
+                                <h3 class="medicine-name">Paracetamol 500mg</h3>
+                                <span class="medicine-category">Pain Relief</span>
+                            </div>
+                            <div class="medicine-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-cube"></i>
+                                    <span>50 tablets</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>2026-03-15</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Sealed</span>
+                                </div>
+                            </div>
+                            <div class="status-badge available">
+                                <i class="fas fa-check-circle"></i>
+                                Available
+                            </div>
+                            <div class="card-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </label>
+                        
+                        <div class="card-expanded">
+                            <div class="donors-section">
+                                <h4 class="donors-title">
+                                    <i class="fas fa-users"></i>
+                                    Donors for this Medicine
+                                </h4>
+                                <div class="donors-table">
+                                    <table>
+                                        <thead>
+                                          <tr>
+                                                <th>Donor Name</th>
+                                                <th>Quantity Donated</th>
+                                                <th>Date Donated</th>
+                                                <th>Contact</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="donor-info">
+                                                        <div class="donor-avatar">JD</div>
+                                                        <span>John Doe</span>
+                                                    </div>
+                                                </td>
+                                                <td>25 tablets</td>
+                                                <td>2024-01-15</td>
+                                                <td>john.doe@email.com</td>
+                                                <td><span class="status-active">Active</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="donor-info">
+                                                        <div class="donor-avatar">MS</div>
+                                                        <span>Maria Smith</span>
+                                                    </div>
+                                                </td>
+                                                <td>25 tablets</td>
+                                                <td>2024-01-10</td>
+                                                <td>maria.smith@email.com</td>
+                                                <td><span class="status-pending">Pending</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+              <!-- Medicine Card 3 -->
+<div class="medicine-card">
+                        <input type="checkbox" id="medicine-1" class="card-toggle">
+                        <label for="medicine-1" class="card-header">
+                            <div class="medicine-info">
+                                <h3 class="medicine-name">Paracetamol 500mg</h3>
+                                <span class="medicine-category">Pain Relief</span>
+                            </div>
+                            <div class="medicine-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-cube"></i>
+                                    <span>50 tablets</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>2026-03-15</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Sealed</span>
+                                </div>
+                            </div>
+                            <div class="status-badge available">
+                                <i class="fas fa-check-circle"></i>
+                                Available
+                            </div>
+                            <div class="card-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </label>
+                        
+                        <div class="card-expanded">
+                            <div class="donors-section">
+                                <h4 class="donors-title">
+                                    <i class="fas fa-users"></i>
+                                    Donors for this Medicine
+                                </h4>
+                                <div class="donors-table">
+                                    <table>
+                                        <thead>
+                                          <tr>
+                                                <th>Donor Name</th>
+                                                <th>Quantity Donated</th>
+                                                <th>Date Donated</th>
+                                                <th>Contact</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="donor-info">
+                                                        <div class="donor-avatar">JD</div>
+                                                        <span>John Doe</span>
+                                                    </div>
+                                                </td>
+                                                <td>25 tablets</td>
+                                                <td>2024-01-15</td>
+                                                <td>john.doe@email.com</td>
+                                                <td><span class="status-active">Active</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="donor-info">
+                                                        <div class="donor-avatar">MS</div>
+                                                        <span>Maria Smith</span>
+                                                    </div>
+                                                </td>
+                                                <td>25 tablets</td>
+                                                <td>2024-01-10</td>
+                                                <td>maria.smith@email.com</td>
+                                                <td><span class="status-pending">Pending</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Medicine Card 4 -->
+<div class="medicine-card">
+                        <input type="checkbox" id="medicine-1" class="card-toggle">
+                        <label for="medicine-1" class="card-header">
+                            <div class="medicine-info">
+                                <h3 class="medicine-name">Paracetamol 500mg</h3>
+                                <span class="medicine-category">Pain Relief</span>
+                            </div>
+                            <div class="medicine-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-cube"></i>
+                                    <span>50 tablets</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>2026-03-15</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Sealed</span>
+                                </div>
+                            </div>
+                            <div class="status-badge available">
+                                <i class="fas fa-check-circle"></i>
+                                Available
+                            </div>
+                            <div class="card-actions">
+                                <button class="action-btn edit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="action-btn delete">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </label>
+                        
+                        <div class="card-expanded">
+                            <div class="donors-section">
+                                <h4 class="donors-title">
+                                    <i class="fas fa-users"></i>
+                                    Donors for this Medicine
+                                </h4>
+                                <div class="donors-table">
+                                    <table>
+                                        <thead>
+                                          <tr>
+                                                <th>Donor Name</th>
+                                                <th>Quantity Donated</th>
+                                                <th>Date Donated</th>
+                                                <th>Contact</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="donor-info">
+                                                        <div class="donor-avatar">JD</div>
+                                                        <span>John Doe</span>
+                                                    </div>
+                                                </td>
+                                                <td>25 tablets</td>
+                                                <td>2024-01-15</td>
+                                                <td>john.doe@email.com</td>
+                                                <td><span class="status-active">Active</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="donor-info">
+                                                        <div class="donor-avatar">MS</div>
+                                                        <span>Maria Smith</span>
+                                                    </div>
+                                                </td>
+                                                <td>25 tablets</td>
+                                                <td>2024-01-10</td>
+                                                <td>maria.smith@email.com</td>
+                                                <td><span class="status-pending">Pending</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+    <!-- ************************************************** -->
+     
   </body>
 </html>
