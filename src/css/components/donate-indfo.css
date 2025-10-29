@@ -1,0 +1,155 @@
+.donate-info{
+  background-color: brown;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 20px;
+  position: relative;
+  bottom: 0;
+  right: 0px;
+  left: 20px;
+  box-sizing: border-box;   
+  width:480px;
+
+}
+.statistics{
+    background-color: beige;
+    display: flex;
+    padding:20px; 
+     right:0;  
+    
+    flex-direction:row;
+    gap:20px; 
+    border-radius: 12px;
+    position: relative;
+     
+ 
+}
+
+.stat-card{
+background-color: azure;
+width:200px;
+padding: 15px 20px;
+border-radius: 20px;
+display: flex;
+flex-direction: row;
+align-items: center;
+gap:20px; 
+border-radius: 12px;
+position: relative;
+
+
+
+}
+
+
+.Recent-Donations{
+   background-color: beige;
+    padding: 20px;
+    border-radius: 10px;
+    width: 420px;
+   flex-wrap:wrap;
+
+}
+
+.donation-info{
+    display: grid;
+    gap: 10px;
+    width:fit-content;
+}
+.donation-meta{
+    text-align: right;
+}
+
+.donation-info h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #111;
+}
+
+.donation-info p {
+  margin: 3px 0 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.date {
+  display: block;
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 4px;
+}
+
+.status {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+.medicament-cart{
+  background-color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+}
+
+.Recent-Reviews{
+   background-color: beige;
+    padding: 20px;
+    border-radius: 10px;
+    width: 420px;
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+
+}
+
+.reviews-block {
+display: flex;
+flex-direction:row;
+background-color: aliceblue;
+ justify-content: space-between;
+ border-radius: 20px;
+ padding: 15px;
+}
+
+.reviews-rating{
+position: relative;
+display: flex;
+top:20px;
+right:10px;
+}
+
+p ,
+h5{
+  color:#666;
+}
+
+
+@media (max-width:700px){
+  /*   donate block */
+  .donate-info{
+    width: 100% ;
+    flex:1;
+   right: 0;
+   left:0;
+    transition: all 0.3s ease;
+  } 
+  .statistics {
+    flex-direction: column ;
+    align-items: center;
+    gap:30px;
+
+  }
+  .stat-card{
+    height: 100px;
+  }
+
+.profile-container{
+      flex-wrap: wrap;
+}
+  
+}

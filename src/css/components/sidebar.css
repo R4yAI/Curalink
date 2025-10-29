@@ -66,7 +66,7 @@
 }
 
 .sidebar-item.active {
-  background: var(--color-primary);
+  background: var(--gradient-green);
 }
 
 .sidebar-item.active .sidebar-link {
@@ -79,4 +79,21 @@
 
 body {
   background: var(--color-bg);
+}
+
+@media (max-width:700px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%); /* hide sidebar */
+    z-index: 1000;
+  }
+   .personnel-info,
+  .donate-info{
+    width: 100%;
+  }
+  .Side-Bar.active {
+    transform: translateX(0); /* show sidebar when active */
+  }
 }
