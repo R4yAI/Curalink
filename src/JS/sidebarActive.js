@@ -12,14 +12,14 @@
           if (hamburgerMenu && sidebar && sidebarOverlay) {
               hamburgerMenu.addEventListener('click', function() {
                   console.log('Menu clicked! Sidebar should open.');
-                  sidebar.classList.add('active');
-                  sidebarOverlay.classList.add('active');
+                  sidebar.classList.add('actif');
+                  sidebarOverlay.classList.add('actif');
               });
               
               sidebarOverlay.addEventListener('click', function() {
                   console.log('Overlay clicked! Sidebar should close.');
-                  sidebar.classList.remove('active');
-                  sidebarOverlay.classList.remove('active');
+                  sidebar.classList.remove('actif');
+                  sidebarOverlay.classList.remove('actif');
               });
           } else {
               console.error('Elements manquants!');
