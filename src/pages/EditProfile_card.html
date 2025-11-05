@@ -1,56 +1,52 @@
 <!DOCTYPE html>
-      <html lang="en">
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          
-        <link rel="stylesheet" href="styleProfile/editProfile.css">
-        <link rel="stylesheet" href="styleProfile/media.css">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>editProfile</title>
+    <link rel="stylesheet" href="/src/css/style.css" />
 
+    <title>editProfile</title>
+  </head>
 
-      </head>
+  <body>
+    <div class="overplay" id="overplay">
+      <div class="modal">
+        <h3>Edit Profile</h3>
+        <p class="subtitle">Update your profile information.</p>
 
-      <body>
-        <div class="overplay">
+        <form class="modal-form">
+          <label>Full name</label>
+          <input type="text" placeholder="John Doe" />
+          <br />
+          <label>Email</label>
+          <input text="email" placeholder="john.doe@email.com" />
+          <br />
 
-          <div class="modal">
-              <h3>Edit Profile</h3>
-              <p class ="subtitle">Update your profile information.</p>
-           
-     <form class="modal-form">
-        
-       <label>Full name</label>
-       <input type="text" placeholder="John Doe">
-        <br>
-       <label>Email</label>
-       <input text="email" placeholder="john.doe@email.com">
-        <br>
-
-       <label>Phone</label>
-       <input type="tel" placeholder="+(555)123-4567">
-        <br>
+          <label>Phone</label>
+          <input type="tel" placeholder="+(555)123-4567" />
+          <br />
 
           <label>Location</label>
-        <input type="text" placeholder="Downtown, City Center">
-        <br>
+          <input type="text" placeholder="Downtown, City Center" />
+          <br />
 
-         <div class="modal-buttons">
-          <button type="submit" class="save-btn">Save Changes</button>
-          <button type="button" class="cancel-btn">Cancel</button>
-        </div>
+          <div class="modal-buttons">
+            <button type="submit" class="save-btn">Save Changes</button>
+            <button>
+              <a
+                href="./Profile.html"
+                type="button"
+                id="cancel-btn"
+                class="cancel-btn"
+                >Cancel</a
+              >
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
 
-       </form>
-   
-       </div>
-       </div>
-
-        <script src="JS/scripts.js"></script>
-
-      </body>
-
-      </html>
-      
-     
-
+    <script src="/src/JS/profile_card.js"></script>
+  </body>
+</html>

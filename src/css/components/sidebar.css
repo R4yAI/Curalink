@@ -6,7 +6,7 @@
   top: 50px;
   bottom: 0;
   width: 270px;
-  height: 100vh;
+  height: 100%;
   padding: 20px 18px;
   position: fixed;
   overflow: hidden auto;
@@ -93,12 +93,18 @@ body {
     left: 0;
     transform: translateX(-100%); /* hide sidebar */
     z-index: 1000;
+    transition: transform 0.3s ease;
   }
   .personnel-info,
   .donate-info {
     width: 100%;
   }
-  .Side-Bar.active {
-    transform: translateX(0); /* show sidebar when active */
+
+  .sidebar.active {
+    transform: translateX(0);
+    z-index: 1000;
+  }
+  .sidebar-overlay.active {
+    display: block;
   }
 }
