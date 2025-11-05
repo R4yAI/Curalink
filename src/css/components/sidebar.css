@@ -8,7 +8,7 @@
   width: 270px;
   height: 100%;
   padding: 20px 18px;
-  position: fixed;
+  position:fixed;
   overflow: hidden auto;
   scrollbar-width: thin;
   scrollbar-color: var(--color-bg);
@@ -82,6 +82,9 @@
   bottom: 100px;
 }
 
+
+
+
 body {
   background: var(--color-bg);
 }
@@ -94,17 +97,41 @@ body {
     transform: translateX(-100%); /* hide sidebar */
     z-index: 1000;
     transition: transform 0.3s ease;
+    width: 150px;
   }
   .personnel-info,
   .donate-info {
     width: 100%;
   }
 
-  .sidebar.active {
+  .sidebar-footer {
+  position: absolute;
+  bottom: 100px;
+}
+
+  .sidebar.actif {
     transform: translateX(0);
     z-index: 1000;
   }
-  .sidebar-overlay.active {
-    display: block;
+  .sidebar-overlay.actif {
+    opacity: 1;
+  visibility: visible;
   }
+
+  
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+  
+
+
+
+  
 }

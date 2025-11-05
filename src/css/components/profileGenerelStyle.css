@@ -11,8 +11,6 @@ body {
  .main-content {
     height: 100vh;
     flex:1;
-    margin-left:300px;
- 
   }
 
  .profile-container{
@@ -40,6 +38,6 @@ body {
    @media (max-width: 700px) {
   .main-content {
       margin-left: 0;
-      padding: 1rem;
+      padding-left:10px;
   }
 }
