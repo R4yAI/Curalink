@@ -7,3 +7,21 @@
   --fs-6: clamp(0.875rem, 0.6153846153846154rem + 0.5128205128205128vw, 1rem);
   --fs-7: 1.125rem;
 }
+
+.text.primary {
+  color: var(--color-primary);
+}
+
+.text.hero {
+  background: var(--gradient-hero);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text.gray {
+  color: var(--color-text-gray);
+}
+
+.text.black {
+  color: var(--color-text-black);
+}
