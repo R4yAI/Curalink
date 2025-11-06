@@ -1,70 +1,64 @@
-main{
-    margin-top: 50px;
-    align-content: center;
-    justify-content: center;
-}
-
 #first_div {
-    align-items: center;
+  align-items: center;
 }
 
-#Trusted { 
-  justify-content: center; 
-  align-items: center;       
-  gap: 8px;                           
+#Trusted {
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
   background: var(--color-primary-soft);
-  color: var(--color-primary-active);         
+  color: var(--color-primary-active);
   border: 1px solid hsl(162, 60%, 80%);
-  padding: 0.5em 1.4em;          
-  border-radius: 50px;                
+  padding: 0.5em 1.4em;
+  border-radius: 50px;
   font-size: 0.4rem;
   font-weight: 500;
 
-  width: fit-content;            
-  margin: 2rem auto;                  
+  width: fit-content;
+  margin: 2rem auto;
 }
 
 #donate {
-  justify-content: center; 
-  align-items: center;       
-  gap: 8px;                           
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
   background: var(--color-primary-hover);
-  color: white;         
-  padding: 0.2em 1em;          
-  border-radius: 50px;                
+  color: white;
+  padding: 0.2em 1em;
+  border-radius: 50px;
   font-size: 1rem;
   font-weight: 500;
 
-  width: fit-content;            
-  margin: 2rem auto;                  
+  width: fit-content;
+  margin: 2rem auto;
 }
 
 #request {
-  justify-content: center; 
-  align-items: center;       
-  gap: 8px;   
-  border: 1px solid grey;  
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid grey;
   background: white;
-  color: black;         
-  padding: 0.2em 1em;          
-  border-radius: 50px;                
+  color: black;
+  padding: 0.2em 1em;
+  border-radius: 50px;
   font-size: 1rem;
   font-weight: 500;
 
-  width: fit-content;            
-  margin: 2rem auto;                  
+  width: fit-content;
+  margin: 2rem auto;
 }
 
 #s1 {
-    text-align: center;
-    color: var(--color-primary) ;
-    font-size: 1.5rem;      
-    width: 90%;        
-    margin: 20px auto;   
-    line-height: 1.6;   
+  text-align: center;
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  width: 90%;
+  margin: 20px auto;
+  line-height: 1.6;
 }
 
 #s_sub {
-    text-align: center;
-    font-size: 0.7rem; 
+  text-align: center;
+  font-size: 0.7rem;
 }
