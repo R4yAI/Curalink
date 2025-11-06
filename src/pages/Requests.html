@@ -13,6 +13,8 @@
     />
     <script defer src="/src/JS/highlightnav.js"></script>
     <script defer src="/src/JS/sidebarActive.js"></script>
+    <script defer src="/src/JS/modal.js"></script>
+
     <title>Requests</title>
   </head>
 
@@ -81,7 +83,89 @@
         <span>Logo</span>
         <h2>Requests</h2>
         <p>Create and manage your medicine request</p>
-        <button class="green">Create Request</button>
+        <button
+          data-modal-target="#create-request-modal"
+          class="green normal-size"
+        >
+          Create Request
+        </button>
+        <div class="modal" id="create-request-modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2>Create New Request</h2>
+              <button data-close-button class="close-btn">&times;</button>
+            </div>
+
+            <p class="modal-subtitle">
+              Describe what medicine or equipment you need.
+            </p>
+
+            <form id="create-request-form">
+              <div class="form-group">
+                <label>Medicine Name</label>
+                <input
+                  type="text"
+                  placeholder="e.g., Metformin 500mg"
+                  name="medicine"
+                  required
+                />
+              </div>
+
+              <div class="form-row">
+                <div class="form-group half">
+                  <label>Quantity Needed</label>
+                  <input
+                    type="text"
+                    placeholder="e.g., 30 tablets"
+                    name="quantity"
+                    required
+                  />
+                </div>
+                <div class="form-group half">
+                  <label>Urgency</label>
+                  <select name="urgency" required>
+                    <option value="">Select urgency</option>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Location</label>
+                <input
+                  type="text"
+                  placeholder="e.g., Downtown"
+                  name="location"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label>Additional Notes (Optional)</label>
+                <textarea
+                  placeholder="Any specific requirements..."
+                  name="notes"
+                ></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="submit-btn normal-size">
+                  Create Request
+                </button>
+                <button
+                  type="button"
+                  data-close-button
+                  class="cancel-btn normal-size"
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="overlay" id="overlay"></div>
       </section>
       <section class="cards">
         <div class="wrapper">
@@ -112,7 +196,7 @@
               </div>
             </div>
             <div class="card-row">
-              <button class="primary">View Matches</button>
+              <button class="primary normal-size">View Matches</button>
               <button class="gray">Contact</button>
             </div>
           </div>
@@ -144,7 +228,7 @@
               </div>
             </div>
             <div class="card-row">
-              <button class="primary">View Matches</button>
+              <button class="primary normal-size">View Matches</button>
               <button class="gray">Contact</button>
             </div>
           </div>
@@ -175,7 +259,7 @@
               </div>
             </div>
             <div class="card-row">
-              <button class="primary">View Matches</button>
+              <button class="primary normal-size">View Matches</button>
               <button class="gray">Contact</button>
             </div>
           </div>
@@ -206,7 +290,7 @@
               </div>
             </div>
             <div class="card-row">
-              <button class="primary">View Matches</button>
+              <button class="primary normal-size">View Matches</button>
               <button class="gray">Contact</button>
             </div>
           </div>
