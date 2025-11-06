@@ -1,7 +1,6 @@
-button {
+button.normal-size {
   display: inline-block;
   font-size: 1rem;
-  color: var(--color-text-white);
   line-height: 1.5;
   padding: 10px 14px;
   border-radius: 20px;
