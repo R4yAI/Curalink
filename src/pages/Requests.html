@@ -11,10 +11,14 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script defer src="/src/JS/highlightnav.js"></script>
+    <script defer src="/src/JS/sidebarActive.js"></script>
+    <script defer src="/src/JS/modal.js"></script>
+
     <title>Requests</title>
   </head>
 
-  <body>
+  <body style="height: 10000px">
     <header>
       <nav class="navbar">
         <a class="logo">LOGO</a>
@@ -24,9 +28,17 @@
           <li class="navbar-item"><a class="navbar-link">Contact</a></li>
           <li class="navbar-item"><a class="navbar-link">Dashboard</a></li>
         </ul>
+
+        <div class="hamburger-menu">
+          <span class="material-symbols-outlined">menu</span>
+        </div>
+
         <div><a class="profile">profile</a></div>
       </nav>
     </header>
+
+    <!-- Overlay pour fermer la sidebar -->
+    <div class="sidebar-overlay"></div>
 
     <nav class="sidebar">
       <ul class="sidebar-menu">
@@ -63,17 +75,227 @@
       </div>
     </nav>
 
-    <main>
-      <section class="main-content">
-        <div class="requests-title">
-          <span>Logo</span>
-          <h2>Requests</h2>
-          <p>Create and manage your medicine request</p>
-          <button class="green">Create Request</button>
+    <main class="main-content">
+      <section
+        class="requests-title"
+        style="padding-inline: 50px; padding-block-start: 20px"
+      >
+        <span>Logo</span>
+        <h2>Requests</h2>
+        <p>Create and manage your medicine request</p>
+        <button
+          data-modal-target="#create-request-modal"
+          class="green normal-size"
+        >
+          Create Request
+        </button>
+        <div class="modal" id="create-request-modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2>Create New Request</h2>
+              <button data-close-button class="close-btn">&times;</button>
+            </div>
+
+            <p class="modal-subtitle">
+              Describe what medicine or equipment you need.
+            </p>
+
+            <form id="create-request-form">
+              <div class="form-group">
+                <label>Medicine Name</label>
+                <input
+                  type="text"
+                  placeholder="e.g., Metformin 500mg"
+                  name="medicine"
+                  required
+                />
+              </div>
+
+              <div class="form-row">
+                <div class="form-group half">
+                  <label>Quantity Needed</label>
+                  <input
+                    type="text"
+                    placeholder="e.g., 30 tablets"
+                    name="quantity"
+                    required
+                  />
+                </div>
+                <div class="form-group half">
+                  <label>Urgency</label>
+                  <select name="urgency" required>
+                    <option value="">Select urgency</option>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Location</label>
+                <input
+                  type="text"
+                  placeholder="e.g., Downtown"
+                  name="location"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label>Additional Notes (Optional)</label>
+                <textarea
+                  placeholder="Any specific requirements..."
+                  name="notes"
+                ></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="submit-btn normal-size">
+                  Create Request
+                </button>
+                <button
+                  type="button"
+                  data-close-button
+                  class="cancel-btn normal-size"
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="overlay" id="overlay"></div>
+      </section>
+      <section class="cards">
+        <div class="wrapper">
+          <div class="card">
+            <div class="card-row">
+              <h3>MED 500mg</h3>
+              <span>Match Score</span>
+            </div>
+            <div class="card-row">
+              <div class="status-block">
+                <span class="med-urgency high"> HIGH </span>
+                <span class="status">Active</span>
+              </div>
+              <span class="text hero">95%</span>
+            </div>
+            <div class="med-specs">
+              <div class="card-row">
+                <span class="text gray">Quantity</span>
+                <span class="text black">30 tablets</span>
+              </div>
+              <div class="card-row">
+                <span class="text gray">Location</span>
+                <span class="text black">Downtown, 2.5km</span>
+              </div>
+              <div class="card-row">
+                <span class="text gray">Matches Found</span>
+                <span class="text primary">3 donors</span>
+              </div>
+            </div>
+            <div class="card-row">
+              <button class="primary normal-size">View Matches</button>
+              <button class="gray">Contact</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-row">
+              <h3>MED 500mg</h3>
+              <span>Match Score</span>
+            </div>
+            <div class="card-row">
+              <div class="status-block">
+                <span class="med-urgency high"> HIGH </span>
+                <span class="status">Active</span>
+              </div>
+              <span class="text hero">95%</span>
+            </div>
+            <div class="med-specs">
+              <div class="card-row">
+                <span class="text gray">Quantity</span>
+                <span class="text black">30 tablets</span>
+              </div>
+              <div class="card-row">
+                <span class="text gray">Location</span>
+                <span class="text black">Downtown, 2.5km</span>
+              </div>
+              <div class="card-row">
+                <span class="text gray">Matches Found</span>
+                <span class="text primary">3 donors</span>
+              </div>
+            </div>
+            <div class="card-row">
+              <button class="primary normal-size">View Matches</button>
+              <button class="gray">Contact</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-row">
+              <h3>MED 500mg</h3>
+              <span>Match Score</span>
+            </div>
+            <div class="card-row">
+              <div class="status-block">
+                <span class="med-urgency high"> HIGH </span>
+                <span class="status">Active</span>
+              </div>
+              <span class="text hero">95%</span>
+            </div>
+            <div class="med-specs">
+              <div class="card-row">
+                <span class="text gray">Quantity</span>
+                <span class="text black">30 tablets</span>
+              </div>
+              <div class="card-row">
+                <span class="text gray">Location</span>
+                <span class="text black">Downtown, 2.5km</span>
+              </div>
+              <div class="card-row">
+                <span class="text gray">Matches Found</span>
+                <span class="text primary">3 donors</span>
+              </div>
+            </div>
+            <div class="card-row">
+              <button class="primary normal-size">View Matches</button>
+              <button class="gray">Contact</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-row">
+              <h3>MED 500mg</h3>
+              <span>Match Score</span>
+            </div>
+            <div class="card-row">
+              <div class="status-block">
+                <span class="med-urgency high"> HIGH </span>
+                <span class="status">Active</span>
+              </div>
+              <span class="text hero">95%</span>
+            </div>
+            <div class="med-specs">
+              <div class="card-row">
+                <span class="text gray">Quantity</span>
+                <span class="text black">30 tablets</span>
+              </div>
+              <div class="card-row">
+                <span class="text gray">Location</span>
+                <span class="text black">Downtown, 2.5km</span>
+              </div>
+              <div class="card-row">
+                <span class="text gray">Matches Found</span>
+                <span class="text primary">3 donors</span>
+              </div>
+            </div>
+            <div class="card-row">
+              <button class="primary normal-size">View Matches</button>
+              <button class="gray">Contact</button>
+            </div>
+          </div>
         </div>
       </section>
     </main>
-
-    <script src="/src/JS/highlightnav.js"></script>
   </body>
 </html>

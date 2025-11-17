@@ -1,14 +1,26 @@
-button {
+button.normal-size {
   display: inline-block;
-  font-size: var(--fs-7);
+  font-size: 1rem;
   line-height: 1.5;
-  font-weight: 700;
-  padding: 10.5px 24px;
-  border-radius: 28px;
+  padding: 10px 14px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
   transition: 150ms ease-in-out;
   transition-property: background, opacity;
 }
 
 button.green {
   background: var(--gradient-green);
+}
+
+button.green:hover {
+  opacity: 0.8;
+}
+
+button.primary {
+  background: var(--color-primary);
+}
+
+button.gray {
 }

@@ -1,0 +1,1562 @@
+/* Medicines Page Main Layout */
+.medicines-main {
+    margin-left: 250px;
+    margin-top: 80px;
+    padding: 2rem;
+    min-height: calc(100vh - 80px);
+}
+
+.medicines-content {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.medicines-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.medicines-title-section {
+    flex: 1;
+}
+
+.medicines-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: hsl(160, 60%, 25%);
+    margin: 0 0 0.5rem 0;
+}
+
+.medicines-subtitle {
+    font-size: 1rem;
+    color: hsl(160, 20%, 40%);
+    margin: 0;
+}
+
+.btn-donate-medicine {
+    background: hsl(160, 60%, 45%);
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-donate-medicine:hover {
+    background: hsl(160, 60%, 40%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-donate-medicine:active {
+    transform: translateY(0);
+}
+
+/* Filters Section */
+.medicines-filters {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+}
+
+.search-container {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.875rem 1rem 0.875rem 3rem;
+    border: 2px solid hsl(160, 30%, 85%);
+    border-radius: 50px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: hsl(160, 60%, 45%);
+    box-shadow: 0 0 0 3px hsla(160, 60%, 45%, 0.1);
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    pointer-events: none;
+}
+
+.filter-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-select {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.75rem 1rem;
+    border: 2px solid hsl(160, 30%, 85%);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: hsl(160, 60%, 45%);
+    box-shadow: 0 0 0 3px hsla(160, 60%, 45%, 0.1);
+}
+
+/* Medicines Grid */
+.medicines-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Medicine Card Wrapper */
+.medicine-card-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Medicine Card */
+.medicine-card-clickable {
+    cursor: pointer;
+    display: block;
+}
+
+.medicine-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.medicine-card-clickable:hover .medicine-card {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.medicine-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    background: hsl(160, 60%, 96%);
+    border-bottom: 1px solid hsl(160, 30%, 90%);
+}
+
+.medicine-status {
+    padding: 0.375rem 0.875rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.medicine-status.available {
+    background: hsl(120, 50%, 90%);
+    color: hsl(120, 50%, 30%);
+}
+
+.medicine-status.pending {
+    background: hsl(45, 90%, 90%);
+    color: hsl(45, 90%, 30%);
+}
+
+.medicine-status.claimed {
+    background: hsl(0, 50%, 90%);
+    color: hsl(0, 50%, 30%);
+}
+
+.medicine-category {
+    padding: 0.375rem 0.875rem;
+    background: hsl(160, 60%, 90%);
+    color: hsl(160, 60%, 30%);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.medicine-card-body {
+    padding: 1.25rem;
+    flex: 1;
+}
+
+.medicine-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: hsl(160, 60%, 20%);
+    margin: 0 0 0.5rem 0;
+}
+
+.medicine-description {
+    font-size: 0.9rem;
+    color: hsl(160, 20%, 40%);
+    margin: 0 0 1rem 0;
+    line-height: 1.5;
+}
+
+.medicine-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.medicine-detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+}
+
+.detail-label {
+    color: hsl(160, 20%, 50%);
+    font-weight: 500;
+}
+
+.detail-value {
+    color: hsl(160, 60%, 25%);
+    font-weight: 600;
+}
+
+.medicine-card-footer {
+    padding: 1rem 1.25rem;
+    border-top: 1px solid hsl(160, 30%, 90%);
+    display: flex;
+    gap: 0.75rem;
+}
+
+.btn-request {
+    width: 100%;
+    padding: 0.625rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    background: hsl(160, 60%, 45%);
+    color: white;
+    pointer-events: auto;
+    position: relative;
+    z-index: 10;
+}
+
+.btn-request:hover:not(:disabled) {
+    background: hsl(160, 60%, 40%);
+    transform: translateY(-1px);
+}
+
+.btn-request:disabled {
+    background: hsl(160, 20%, 85%);
+    color: hsl(160, 20%, 60%);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+
+/* Donors Table Styles (Below Card) */
+.donors-popup-toggle {
+    display: none;
+}
+
+.donors-table-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s ease, margin-top 0.45s ease;
+    margin-top: 0;
+}
+
+.donors-popup-toggle:checked ~ .medicine-card-clickable ~ .donors-table-wrapper {
+    max-height: 1200px;
+    margin-top: 1rem;
+}
+
+.donors-table-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    padding: 1rem;
+    overflow: auto;
+}
+
+.donors-table-title {
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: hsl(160, 60%, 25%);
+}
+
+.donors-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    min-width: 640px; /* keeps layout readable on wider screens, scrolls on smaller */
+}
+
+.donors-table thead {
+    background: hsl(160, 60%, 96%);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    box-shadow: inset 0 -1px 0 hsl(160, 30%, 85%);
+}
+
+.donors-table th {
+    padding: 0.85rem 1rem;
+    text-align: left;
+    font-weight: 700;
+    color: hsl(160, 60%, 25%);
+    border-bottom: none;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.donors-table td {
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid hsl(160, 30%, 90%);
+    color: hsl(160, 20%, 30%);
+    vertical-align: middle;
+}
+
+.donors-table tbody tr {
+    transition: background-color 0.18s ease, transform 0.12s ease;
+}
+
+.donors-table tbody tr:hover {
+    background: hsl(160, 60%, 98%);
+    transform: translateY(-1px);
+}
+
+.donors-table tbody tr:nth-child(even) {
+    background: hsl(160, 60%, 99%);
+}
+
+.donors-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Donor cell layout: avatar + name/meta */
+.donor-cell {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.donor-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: hsl(160, 60%, 92%);
+    display: inline-block;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.donor-name {
+    font-weight: 600;
+    color: hsl(160, 60%, 25%);
+}
+
+.donor-meta {
+    font-size: 0.85rem;
+    color: hsl(160, 20%, 45%);
+}
+
+/* status chips */
+.donor-status {
+    padding: 0.35rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    display: inline-block;
+    min-width: 64px;
+    text-align: center;
+}
+
+.donor-status.available {
+    background: hsl(120, 50%, 92%);
+    color: hsl(120, 50%, 26%);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03);
+}
+
+.donor-status.pending {
+    background: hsl(45, 90%, 92%);
+    color: hsl(45, 90%, 28%);
+}
+
+.donor-status.claimed {
+    background: hsl(0, 50%, 92%);
+    color: hsl(0, 50%, 28%);
+}
+
+/* action button */
+.donor-action {
+    background: transparent;
+    border: 1px solid hsl(160, 30%, 90%);
+    padding: 0.45rem 0.75rem;
+    border-radius: 8px;
+    cursor: pointer;
+    color: hsl(160, 60%, 25%);
+    font-weight: 600;
+}
+
+.donor-action:hover {
+    background: hsl(160, 60%, 96%);
+    border-color: hsl(160, 60%, 45%);
+}
+
+/* Responsive: collapse table into stacked cards on small screens */
+@media (max-width: 640px) {
+    .donors-table { min-width: unset; display: block; }
+    .donors-table thead { display: none; }
+    .donors-table tbody tr { display: block; margin-bottom: 0.75rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid hsl(160,30%,95%); }
+    .donors-table td { display: flex; justify-content: space-between; padding: 0.75rem 0.85rem; border-bottom: none; }
+    .donors-table td[data-label] { padding-left: 0.85rem; }
+    .donor-cell { gap: 0.5rem; }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .medicines-main {
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    .medicines-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .medicines-header {
+        flex-direction: column;
+    }
+
+    .medicines-title {
+        font-size: 2rem;
+    }
+
+    .medicines-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-group {
+        flex-direction: column;
+    }
+
+    .filter-select {
+        width: 100%;
+    }
+
+    .medicine-card-footer {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .medicines-main {
+        padding: 0.75rem;
+    }
+
+    .medicines-title {
+        font-size: 1.75rem;
+    }
+
+    .medicines-filters {
+        padding: 1rem;
+    }
+
+    .medicine-card-body {
+        padding: 1rem;
+    }
+
+    .donors-table-container {
+        padding: 1rem;
+    }
+
+    .donors-table-title {
+        font-size: 1.1rem;
+    }
+
+    .donors-table {
+        font-size: 0.8rem;
+    }
+
+    .donors-table th,
+    .donors-table td {
+        padding: 0.75rem 0.5rem;
+    }
+}
+
+
+
+/* Medicines Page Main Layout */
+.medicines-main {
+    margin-left: 250px;
+    margin-top: 80px;
+    padding: 2rem;
+    min-height: calc(100vh - 80px);
+}
+
+.medicines-content {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.medicines-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.medicines-title-section {
+    flex: 1;
+}
+
+.medicines-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: hsl(160, 60%, 25%);
+    margin: 0 0 0.5rem 0;
+}
+
+.medicines-subtitle {
+    font-size: 1rem;
+    color: hsl(160, 20%, 40%);
+    margin: 0;
+}
+
+.btn-donate-medicine {
+    background: hsl(160, 60%, 45%);
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-donate-medicine:hover {
+    background: hsl(160, 60%, 40%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-donate-medicine:active {
+    transform: translateY(0);
+}
+
+/* Filters Section */
+.medicines-filters {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+}
+
+.search-container {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.875rem 1rem 0.875rem 3rem;
+    border: 2px solid hsl(160, 30%, 85%);
+    border-radius: 50px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: hsl(160, 60%, 45%);
+    box-shadow: 0 0 0 3px hsla(160, 60%, 45%, 0.1);
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    pointer-events: none;
+}
+
+.filter-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-select {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.75rem 1rem;
+    border: 2px solid hsl(160, 30%, 85%);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: hsl(160, 60%, 45%);
+    box-shadow: 0 0 0 3px hsla(160, 60%, 45%, 0.1);
+}
+
+/* Medicines Grid */
+.medicines-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Medicine Card Wrapper */
+.medicine-card-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Medicine Card */
+.medicine-card-clickable {
+    cursor: pointer;
+    display: block;
+}
+
+.medicine-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.medicine-card-clickable:hover .medicine-card {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.medicine-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    background: hsl(160, 60%, 96%);
+    border-bottom: 1px solid hsl(160, 30%, 90%);
+}
+
+.medicine-status {
+    padding: 0.375rem 0.875rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.medicine-status.available {
+    background: hsl(120, 50%, 90%);
+    color: hsl(120, 50%, 30%);
+}
+
+.medicine-status.pending {
+    background: hsl(45, 90%, 90%);
+    color: hsl(45, 90%, 30%);
+}
+
+.medicine-status.claimed {
+    background: hsl(0, 50%, 90%);
+    color: hsl(0, 50%, 30%);
+}
+
+.medicine-category {
+    padding: 0.375rem 0.875rem;
+    background: hsl(160, 60%, 90%);
+    color: hsl(160, 60%, 30%);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.medicine-card-body {
+    padding: 1.25rem;
+    flex: 1;
+}
+
+.medicine-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: hsl(160, 60%, 20%);
+    margin: 0 0 0.5rem 0;
+}
+
+.medicine-description {
+    font-size: 0.9rem;
+    color: hsl(160, 20%, 40%);
+    margin: 0 0 1rem 0;
+    line-height: 1.5;
+}
+
+.medicine-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.medicine-detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+}
+
+.detail-label {
+    color: hsl(160, 20%, 50%);
+    font-weight: 500;
+}
+
+.detail-value {
+    color: hsl(160, 60%, 25%);
+    font-weight: 600;
+}
+
+.medicine-card-footer {
+    padding: 1rem 1.25rem;
+    border-top: 1px solid hsl(160, 30%, 90%);
+    display: flex;
+    gap: 0.75rem;
+}
+
+.btn-request {
+    width: 100%;
+    padding: 0.625rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    background: hsl(160, 60%, 45%);
+    color: white;
+    pointer-events: auto;
+    position: relative;
+    z-index: 10;
+}
+
+.btn-request:hover:not(:disabled) {
+    background: hsl(160, 60%, 40%);
+    transform: translateY(-1px);
+}
+
+.btn-request:disabled {
+    background: hsl(160, 20%, 85%);
+    color: hsl(160, 20%, 60%);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+
+/* Donors Table Styles (Below Card) */
+.donors-popup-toggle {
+    display: none;
+}
+
+.donors-table-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s ease, margin-top 0.45s ease;
+    margin-top: 0;
+}
+
+.donors-popup-toggle:checked ~ .medicine-card-clickable ~ .donors-table-wrapper {
+    max-height: 1200px;
+    margin-top: 1rem;
+}
+
+.donors-table-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    padding: 1rem;
+    overflow: auto;
+}
+
+.donors-table-title {
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: hsl(160, 60%, 25%);
+}
+
+.donors-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    min-width: 640px; /* keeps layout readable on wider screens, scrolls on smaller */
+}
+
+.donors-table thead {
+    background: hsl(160, 60%, 96%);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    box-shadow: inset 0 -1px 0 hsl(160, 30%, 85%);
+}
+
+.donors-table th {
+    padding: 0.85rem 1rem;
+    text-align: left;
+    font-weight: 700;
+    color: hsl(160, 60%, 25%);
+    border-bottom: none;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.donors-table td {
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid hsl(160, 30%, 90%);
+    color: hsl(160, 20%, 30%);
+    vertical-align: middle;
+}
+
+.donors-table tbody tr {
+    transition: background-color 0.18s ease, transform 0.12s ease;
+}
+
+.donors-table tbody tr:hover {
+    background: hsl(160, 60%, 98%);
+    transform: translateY(-1px);
+}
+
+.donors-table tbody tr:nth-child(even) {
+    background: hsl(160, 60%, 99%);
+}
+
+.donors-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Donor cell layout: avatar + name/meta */
+.donor-cell {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.donor-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: hsl(160, 60%, 92%);
+    display: inline-block;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.donor-name {
+    font-weight: 600;
+    color: hsl(160, 60%, 25%);
+}
+
+.donor-meta {
+    font-size: 0.85rem;
+    color: hsl(160, 20%, 45%);
+}
+
+/* status chips */
+.donor-status {
+    padding: 0.35rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    display: inline-block;
+    min-width: 64px;
+    text-align: center;
+}
+
+.donor-status.available {
+    background: hsl(120, 50%, 92%);
+    color: hsl(120, 50%, 26%);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03);
+}
+
+.donor-status.pending {
+    background: hsl(45, 90%, 92%);
+    color: hsl(45, 90%, 28%);
+}
+
+.donor-status.claimed {
+    background: hsl(0, 50%, 92%);
+    color: hsl(0, 50%, 28%);
+}
+
+/* action button */
+.donor-action {
+    background: transparent;
+    border: 1px solid hsl(160, 30%, 90%);
+    padding: 0.45rem 0.75rem;
+    border-radius: 8px;
+    cursor: pointer;
+    color: hsl(160, 60%, 25%);
+    font-weight: 600;
+}
+
+.donor-action:hover {
+    background: hsl(160, 60%, 96%);
+    border-color: hsl(160, 60%, 45%);
+}
+
+/* Responsive: collapse table into stacked cards on small screens */
+@media (max-width: 640px) {
+    .donors-table { min-width: unset; display: block; }
+    .donors-table thead { display: none; }
+    .donors-table tbody tr { display: block; margin-bottom: 0.75rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid hsl(160,30%,95%); }
+    .donors-table td { display: flex; justify-content: space-between; padding: 0.75rem 0.85rem; border-bottom: none; }
+    .donors-table td[data-label] { padding-left: 0.85rem; }
+    .donor-cell { gap: 0.5rem; }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .medicines-main {
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    .medicines-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .medicines-header {
+        flex-direction: column;
+    }
+
+    .medicines-title {
+        font-size: 2rem;
+    }
+
+    .medicines-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-group {
+        flex-direction: column;
+    }
+
+    .filter-select {
+        width: 100%;
+    }
+
+    .medicine-card-footer {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .medicines-main {
+        padding: 0.75rem;
+    }
+
+    .medicines-title {
+        font-size: 1.75rem;
+    }
+
+    .medicines-filters {
+        padding: 1rem;
+    }
+
+    .medicine-card-body {
+        padding: 1rem;
+    }
+
+    .donors-table-container {
+        padding: 1rem;
+    }
+
+    .donors-table-title {
+        font-size: 1.1rem;
+    }
+
+    .donors-table {
+        font-size: 0.8rem;
+    }
+
+    .donors-table th,
+    .donors-table td {
+        padding: 0.75rem 0.5rem;
+    }
+}
+
+
+/* Medicines Page Main Layout */
+.medicines-main {
+    margin-left: 250px;
+    margin-top: 80px;
+    padding: 2rem;
+    min-height: calc(100vh - 80px);
+}
+
+.medicines-content {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.medicines-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.medicines-title-section {
+    flex: 1;
+}
+
+.medicines-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: hsl(160, 60%, 25%);
+    margin: 0 0 0.5rem 0;
+}
+
+.medicines-subtitle {
+    font-size: 1rem;
+    color: hsl(160, 20%, 40%);
+    margin: 0;
+}
+
+.btn-donate-medicine {
+    background: hsl(160, 60%, 45%);
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-donate-medicine:hover {
+    background: hsl(160, 60%, 40%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-donate-medicine:active {
+    transform: translateY(0);
+}
+
+/* Filters Section */
+.medicines-filters {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+}
+
+.search-container {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.875rem 1rem 0.875rem 3rem;
+    border: 2px solid hsl(160, 30%, 85%);
+    border-radius: 50px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: hsl(160, 60%, 45%);
+    box-shadow: 0 0 0 3px hsla(160, 60%, 45%, 0.1);
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    pointer-events: none;
+}
+
+.filter-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-select {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.75rem 1rem;
+    border: 2px solid hsl(160, 30%, 85%);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: hsl(160, 60%, 45%);
+    box-shadow: 0 0 0 3px hsla(160, 60%, 45%, 0.1);
+}
+
+/* Medicines Grid */
+.medicines-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Medicine Card Wrapper */
+.medicine-card-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Medicine Card */
+.medicine-card-clickable {
+    cursor: pointer;
+    display: block;
+}
+
+.medicine-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.medicine-card-clickable:hover .medicine-card {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.medicine-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    background: hsl(160, 60%, 96%);
+    border-bottom: 1px solid hsl(160, 30%, 90%);
+}
+
+.medicine-status {
+    padding: 0.375rem 0.875rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.medicine-status.available {
+    background: hsl(120, 50%, 90%);
+    color: hsl(120, 50%, 30%);
+}
+
+.medicine-status.pending {
+    background: hsl(45, 90%, 90%);
+    color: hsl(45, 90%, 30%);
+}
+
+.medicine-status.claimed {
+    background: hsl(0, 50%, 90%);
+    color: hsl(0, 50%, 30%);
+}
+
+.medicine-category {
+    padding: 0.375rem 0.875rem;
+    background: hsl(160, 60%, 90%);
+    color: hsl(160, 60%, 30%);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.medicine-card-body {
+    padding: 1.25rem;
+    flex: 1;
+}
+
+.medicine-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: hsl(160, 60%, 20%);
+    margin: 0 0 0.5rem 0;
+}
+
+.medicine-description {
+    font-size: 0.9rem;
+    color: hsl(160, 20%, 40%);
+    margin: 0 0 1rem 0;
+    line-height: 1.5;
+}
+
+.medicine-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.medicine-detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+}
+
+.detail-label {
+    color: hsl(160, 20%, 50%);
+    font-weight: 500;
+}
+
+.detail-value {
+    color: hsl(160, 60%, 25%);
+    font-weight: 600;
+}
+
+.medicine-card-footer {
+    padding: 1rem 1.25rem;
+    border-top: 1px solid hsl(160, 30%, 90%);
+    display: flex;
+    gap: 0.75rem;
+}
+
+.btn-request {
+    width: 100%;
+    padding: 0.625rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    background: hsl(160, 60%, 45%);
+    color: white;
+    pointer-events: auto;
+    position: relative;
+    z-index: 10;
+}
+
+.btn-request:hover:not(:disabled) {
+    background: hsl(160, 60%, 40%);
+    transform: translateY(-1px);
+}
+
+.btn-request:disabled {
+    background: hsl(160, 20%, 85%);
+    color: hsl(160, 20%, 60%);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+
+/* Donors Table Styles (Below Card) */
+.donors-popup-toggle {
+    display: none;
+}
+
+.donors-table-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s ease, margin-top 0.45s ease;
+    margin-top: 0;
+}
+
+.donors-popup-toggle:checked ~ .medicine-card-clickable ~ .donors-table-wrapper {
+    max-height: 1200px;
+    margin-top: 1rem;
+}
+
+.donors-table-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    padding: 1rem;
+    overflow: auto;
+}
+
+.donors-table-title {
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: hsl(160, 60%, 25%);
+}
+
+.donors-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    min-width: 640px; /* keeps layout readable on wider screens, scrolls on smaller */
+}
+
+.donors-table thead {
+    background: hsl(160, 60%, 96%);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    box-shadow: inset 0 -1px 0 hsl(160, 30%, 85%);
+}
+
+.donors-table th {
+    padding: 0.85rem 1rem;
+    text-align: left;
+    font-weight: 700;
+    color: hsl(160, 60%, 25%);
+    border-bottom: none;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.donors-table td {
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid hsl(160, 30%, 90%);
+    color: hsl(160, 20%, 30%);
+    vertical-align: middle;
+}
+
+.donors-table tbody tr {
+    transition: background-color 0.18s ease, transform 0.12s ease;
+}
+
+.donors-table tbody tr:hover {
+    background: hsl(160, 60%, 98%);
+    transform: translateY(-1px);
+}
+
+.donors-table tbody tr:nth-child(even) {
+    background: hsl(160, 60%, 99%);
+}
+
+.donors-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Donor cell layout: avatar + name/meta */
+.donor-cell {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.donor-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: hsl(160, 60%, 92%);
+    display: inline-block;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.donor-name {
+    font-weight: 600;
+    color: hsl(160, 60%, 25%);
+}
+
+.donor-meta {
+    font-size: 0.85rem;
+    color: hsl(160, 20%, 45%);
+}
+
+/* status chips */
+.donor-status {
+    padding: 0.35rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    display: inline-block;
+    min-width: 64px;
+    text-align: center;
+}
+
+.donor-status.available {
+    background: hsl(120, 50%, 92%);
+    color: hsl(120, 50%, 26%);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03);
+}
+
+.donor-status.pending {
+    background: hsl(45, 90%, 92%);
+    color: hsl(45, 90%, 28%);
+}
+
+.donor-status.claimed {
+    background: hsl(0, 50%, 92%);
+    color: hsl(0, 50%, 28%);
+}
+
+/* action button */
+.donor-action {
+    background: transparent;
+    border: 1px solid hsl(160, 30%, 90%);
+    padding: 0.45rem 0.75rem;
+    border-radius: 8px;
+    cursor: pointer;
+    color: hsl(160, 60%, 25%);
+    font-weight: 600;
+}
+
+.donor-action:hover {
+    background: hsl(160, 60%, 96%);
+    border-color: hsl(160, 60%, 45%);
+}
+
+/* Responsive: collapse table into stacked cards on small screens */
+@media (max-width: 640px) {
+    .donors-table { min-width: unset; display: block; }
+    .donors-table thead { display: none; }
+    .donors-table tbody tr { display: block; margin-bottom: 0.75rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); overflow: hidden; border: 1px solid hsl(160,30%,95%); }
+    .donors-table td { display: flex; justify-content: space-between; padding: 0.75rem 0.85rem; border-bottom: none; }
+    .donors-table td[data-label] { padding-left: 0.85rem; }
+    .donor-cell { gap: 0.5rem; }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .medicines-main {
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    .medicines-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .medicines-header {
+        flex-direction: column;
+    }
+
+    .medicines-title {
+        font-size: 2rem;
+    }
+
+    .medicines-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-group {
+        flex-direction: column;
+    }
+
+    .filter-select {
+        width: 100%;
+    }
+
+    .medicine-card-footer {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .medicines-main {
+        padding: 0.75rem;
+    }
+
+    .medicines-title {
+        font-size: 1.75rem;
+    }
+
+    .medicines-filters {
+        padding: 1rem;
+    }
+
+    .medicine-card-body {
+        padding: 1rem;
+    }
+
+    .donors-table-container {
+        padding: 1rem;
+    }
+
+    .donors-table-title {
+        font-size: 1.1rem;
+    }
+
+    .donors-table {
+        font-size: 0.8rem;
+    }
+
+    .donors-table th,
+    .donors-table td {
+        padding: 0.75rem 0.5rem;
+    }
+}

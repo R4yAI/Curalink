@@ -2,13 +2,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: var(--color-bg-white);
+  background: var(--color-bg-white);
   top: 50px;
   bottom: 0;
   width: 270px;
-  height: 100vh;
+  height: 100%;
   padding: 20px 18px;
-  position: absolute;
+  position:fixed;
   overflow: hidden auto;
   scrollbar-width: thin;
   scrollbar-color: var(--color-bg);
@@ -77,23 +77,61 @@
   list-style: none;
 }
 
+.sidebar-footer {
+  position: absolute;
+  bottom: 100px;
+}
+
+
+
+
 body {
   background: var(--color-bg);
 }
 
-@media (max-width:700px) {
+@media (max-width: 700px) {
   .sidebar {
     position: fixed;
     top: 0;
     left: 0;
     transform: translateX(-100%); /* hide sidebar */
     z-index: 1000;
+    transition: transform 0.3s ease;
+    width: 150px;
   }
-   .personnel-info,
-  .donate-info{
+  .personnel-info,
+  .donate-info {
     width: 100%;
   }
-  .Side-Bar.active {
-    transform: translateX(0); /* show sidebar when active */
+
+  .sidebar-footer {
+  position: absolute;
+  bottom: 100px;
+}
+
+  .sidebar.actif {
+    transform: translateX(0);
+    z-index: 1000;
   }
+  .sidebar-overlay.actif {
+    opacity: 1;
+  visibility: visible;
+  }
+
+  
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+  
+
+
+
+  
 }

@@ -3,11 +3,12 @@
 @import url("/src/css/components/navbar.css");
 @import url("/src/css/global/boilerplate.css");
 @import url("/src/css/global/fonts.css");
+@import url("/src/css/global/button.css");
 @import url("/src/css/components/profileGenerelStyle.css");
 @import url("/src/css/components/personnel-info.css");
 @import url("/src/css/components/donate-indfo.css");
 @import url("/src/css/components/center-top.css");
+@import url("/src/css/components/requests.css");
 @import url("/src/css/components/home.css");
-
-
-
+@import url("/src/css/components/modal.css");
+@import url("/src/css/components/Medicines.css");
