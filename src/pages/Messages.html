@@ -11,7 +11,12 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <title>Requests</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+
+    <title>Messages</title>
   </head>
 
   <body>
@@ -63,6 +68,209 @@
       </div>
     </nav>
 
+    <div class="top-des">
+      <div class="message_pic"><img src="/images/message.jpg" /></div>
+      <div class="text">
+        <h2>Messages</h2>
+
+        <p>Communicate with donors and recipients</p>
+      </div>
+    </div>
+
+    <div class="chat-fram">
+      <div class="contact-container">
+        <div class="contact-search">
+          <label for="contactSearch"></label>
+          <input
+            type="search"
+            id="contactSearch"
+            name="contactSearch"
+            placeholder="search"
+          />
+        </div>
+
+        <div class="contacts-frame">
+          <!-- 1ER contacte -->
+          <div class="contact">
+            <div class="contact-pic">
+              <img src="/images/photo_profile.jpg" />
+            </div>
+            <div class="contact-info">
+              <h2>Kai Lakestone</h2>
+              <p>thanks! i will pick it tomrow</p>
+            </div>
+            <div class="chat-info">
+              <h6>10 min ago</h6>
+              <div class="chiffre">2</div>
+            </div>
+          </div>
+          <!-- 2éme contacte -->
+          <div class="contact">
+            <div class="contact-pic">
+              <img src="/images/Tik tok profile picture.jpg" />
+            </div>
+            <div class="contact-info">
+              <h2>Preto Cruz</h2>
+              <p>the insuline is still available</p>
+            </div>
+            <div class="chat-info">
+              <h6>1 hour ago</h6>
+            </div>
+          </div>
+
+          <!-- 3éme contacte -->
+
+          <div class="contact">
+            <div class="contact-pic">
+              <img src="/images/photo_profile3.jpg" />
+            </div>
+            <div class="contact-info">
+              <h2>Asher Scoot</h2>
+              <p>can we meet at 3 PM</p>
+            </div>
+            <div class="chat-info">
+              <h6>3 hours ago</h6>
+              <div class="chiffre">1</div>
+            </div>
+          </div>
+
+          <!-- 4éme contacte -->
+
+          <div class="contact">
+            <div class="contact-pic">
+              <img src="/images/photo2.jpg" />
+            </div>
+            <div class="contact-info">
+              <h2>Iris Samsone</h2>
+              <p>perfect,see you then!</p>
+            </div>
+            <div class="chat-info">
+              <h6>yesteday</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-box">
+        <div class="top-conversation">
+          <div class="left">
+            <h4>Kai Lakestone</h4>
+            <p>Active now</p>
+          </div>
+          <div class="right">
+            <div class="icon">
+              <span class="material-symbols-outlined">videocam</span>
+            </div>
+            <div class="icon">
+              <span class="material-symbols-outlined">call</span>
+            </div>
+            <div class="icon">
+              <span class="material-symbols-outlined">info</span>
+            </div>
+          </div>
+        </div>
+        <div class="body-conversation" id="body-conv">
+          <ul>
+            <li class="send_message" id="send_message">
+              <p>salut!</p>
+            </li>
+            <li class="received_message">
+              <p>hi!</p>
+            </li>
+          </ul>
+        </div>
+        <div class="bottom-conversation">
+          <div class="bottom-left">
+            <!-- ADD -->
+            <button class="icon-btn" id="addBtn">
+              <span class="material-symbols-outlined"> add </span>
+            </button>
+            <div id="addFile">
+              <label for="fileInput" class="file-btn">Choisir un fichier</label>
+              <input
+                type="file"
+                id="fileInput"
+                title="fileInput"
+                style="display: none"
+              />
+            </div>
+            <!-- camera -->
+            <button class="icon-btn" id="camera-pic">
+              <span class="material-symbols-outlined">photo_camera</span>
+              <input
+                type="file"
+                id="cameraInput"
+                accept="image/*"
+                capture="environment"
+                style="display: none"
+              />
+              <!--capture="environment" → caméra arrière 
+              capture="user" → caméra frontale
+              accept="image/*" → permet de prendre des photos-->
+            </button>
+
+            <!-- galerie -->
+            <button class="icon-btn" id="photoBtn">
+              <span class="material-symbols-outlined">
+                add_photo_alternate
+              </span>
+
+              <input
+                type="file"
+                id="photo"
+                accept="image/*"
+                style="display: none"
+              />
+            </button>
+
+            <!-- vocal -->
+            <button class="icon-btn" id="micBtn">
+              <span class="material-symbols-outlined"> mic </span>
+            </button>
+
+            <button class="icon-btn" id="toggleBtn">
+              <span class="material-symbols-outlined"> chevron_right </span>
+            </button>
+          </div>
+
+          <div id="iconPanel">
+            <button class="icon-btn">
+              <span class="material-symbols-outlined">add</span>
+            </button>
+            <button class="icon-btn">
+              <span class="material-symbols-outlined">photo_camera</span>
+            </button>
+            <button class="icon-btn">
+              <span class="material-symbols-outlined">add_photo_alternate</span>
+            </button>
+            <button class="icon-btn">
+              <span class="material-symbols-outlined">mic</span>
+            </button>
+          </div>
+
+          <div class="bottom-middle">
+            <!-- message -->
+            <div id="msg" class="message-box" contenteditable="true"></div>
+
+            <button id="emojiBtn" class="icon-btn">
+              <span class="material-symbols-outlined">sentiment_satisfied</span>
+            </button>
+
+            <button id="sendBtn" class="icon-btn-send">
+              <span class="material-symbols-outlined">send</span>
+            </button>
+          </div>
+
+          <div class="bottom-right">
+            <!-- pouce -->
+            <button class="icon-btn" id="thumbUpBtn">
+              <span class="material-symbols-outlined"> thumb_up </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/src/JS/message.js"></script>
     <script src="/src/JS/highlightnav.js"></script>
   </body>
 </html>
