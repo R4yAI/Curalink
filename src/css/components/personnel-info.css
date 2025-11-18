@@ -17,6 +17,23 @@
 img{
   width: 100%;
 }
+.top_desc{
+margin-left: 20px;
+margin-top: 10px;
+display:flex;
+flex-direction: row;
+align-items: center;
+}
+.profile_icon{
+     background-color: rgb(232, 231, 231);
+    border-radius: 50%; 
+    margin: 20px;
+    margin-bottom: 0px;
+    width: 60px;     
+    height: 60px;
+    overflow: hidden;   /* coupe ce qui dépasse du rond */
+    align-self: center; /* centre dans le conteneur */ 
+}
 .personne-info-picture{
     background-color: rgb(232, 231, 231);
     border-radius: 50%; 
@@ -92,6 +109,9 @@ img{
     color: white;
 }
 
+a{
+  color:rgb(163, 162, 162);
+}
  @media(max-width:1100px) {
    .personnel-info{
      width: 100%;   
