@@ -10,6 +10,8 @@
 @import url("/src/css/components/center-top.css");
 @import url("/src/css/components/requests.css");
 @import url("/src/css/components/home.css");
+@import url(/src/css/components/editProfile.css);
+@import url(/src/css/components/message.css);
 @import url("/src/css/components/modal.css");
 @import url("/src/css/components/Medicines.css");
 @import url("/src/css/components/singup-login.css");
