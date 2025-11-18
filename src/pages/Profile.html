@@ -19,20 +19,26 @@
     <script defer src="/src/JS/highlightnav.js"></script>
     <script defer src="/src/JS/sidebarActive.js"></script>
     <script defer src="/src/JS/modal.js"></script>
+    <script defer src="/src/JS/validation_engine.js"></script>
 
     <title>Profile</title>
   </head>
-
 
   <body>
     <header>
       <nav class="navbar">
         <a class="logo">LOGO</a>
         <ul class="navbar-menu">
-          <li class="navbar-item"><a class="navbar-link" href="">Home</a></li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="/index.html">Home</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="/src/pages/Dashboard.html"
+              >Dashboard</a
+            >
+          </li>
           <li class="navbar-item"><a class="navbar-link">About</a></li>
           <li class="navbar-item"><a class="navbar-link">Contact</a></li>
-          <li class="navbar-item"><a class="navbar-link">Dashboard</a></li>
         </ul>
         <div class="nav-right">
           <div class="hamburger-menu">
@@ -83,13 +89,14 @@
 
     <div class="main-content">
       <div class="top_desc">
-        <div class="class profile_icon"><img src="/images/téléchargement.jpg"/></div>
-        
-        <div class="text">
-        <h2>Profile</h2>
-        <p> Manipulate your Profile </p>
+        <div class="class profile_icon">
+          <img src="/images/téléchargement.jpg" />
         </div>
-      
+
+        <div class="text">
+          <h2>Profile</h2>
+          <p>Manipulate your Profile</p>
+        </div>
       </div>
 
       <div class="profile-container">
@@ -131,12 +138,6 @@
             </div>
           </div>
 
-          <button class="profile-button">
-            <a href="\src\pages\EditProfile_card.html" id="edit-btn"
-              >Edit Profile
-          </button>
-
-
           <button
             data-modal-target="#edit-profile-modal"
             class="profile-button"
@@ -152,9 +153,9 @@
               </div>
               <p class="modal-subtitle">Update your profile information.</p>
 
-              <form class="modal-form">
+              <form id="edit-profile-form" action="/">
                 <div class="form-group">
-                  <label>Full name</label>
+                  <label for="">Full name</label>
                   <input type="text" placeholder="John Doe" />
                 </div>
 

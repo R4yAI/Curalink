@@ -16,6 +16,9 @@
 
     <script defer src="/src/JS/highlightnav.js"></script>
     <script defer src="/src/JS/sidebarActive.js"></script>
+    <script defer src="/src/JS/validation_engine.js"></script>
+    <script defer src="/src/JS/modal.js"></script>
+
     <script defer src="/src/JS/Medecines.js"></script>
 
     <title>Medicines</title>
@@ -26,10 +29,16 @@
       <nav class="navbar">
         <a class="logo">LOGO</a>
         <ul class="navbar-menu">
-          <li class="navbar-item"><a class="navbar-link" href="">Home</a></li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="/index.html">Home</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="/src/pages/Dashboard.html"
+              >Dashboard</a
+            >
+          </li>
           <li class="navbar-item"><a class="navbar-link">About</a></li>
           <li class="navbar-item"><a class="navbar-link">Contact</a></li>
-          <li class="navbar-item"><a class="navbar-link">Dashboard</a></li>
         </ul>
         <div><a class="profile">profile</a></div>
       </nav>
@@ -79,7 +88,101 @@
               Browse and manage available medicines
             </p>
           </div>
-          <button class="btn-donate-medicine">Donate Medicine</button>
+          <button
+            data-modal-target="#create-medicine-modal"
+            class="green normal-size"
+          >
+            Create Medicine
+          </button>
+          <div class="modal" id="create-medicine-modal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2>Create New Request</h2>
+                <button data-close-button class="close-btn">&times;</button>
+              </div>
+
+              <p class="modal-subtitle">
+                Describe what medicine or equipment you need.
+              </p>
+
+              <form id="create-medicine-form" action="/">
+                <div class="form-group">
+                  <label for="medicine-name">Medicine Name</label>
+                  <input
+                    type="text"
+                    placeholder="e.g., Metformin 500mg"
+                    name="medicine-name"
+                    id="medicine-name-input"
+                  />
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group half">
+                    <label>Quantity Needed</label>
+                    <input
+                      type="text"
+                      placeholder="e.g., 30 tablets"
+                      name="medicine-quantity"
+                      id="medicine-quantity-input"
+                    />
+                  </div>
+                  <div class="form-group half">
+                    <label for="medicine-category">Category</label>
+                    <select name="medicine-category">
+                      <option value="">Select category</option>
+                      <option value="pain-relief">Pain relief</option>
+                      <option value="antibiotic">Antibiotic</option>
+                      <option value="diabetes">Diabetes</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group half">
+                    <label>Dosage</label>
+                    <input
+                      type="text"
+                      placeholder="e.g., 500mg"
+                      name="medicine-dosage"
+                      id="medicine-dosage-input"
+                    />
+                  </div>
+                  <div class="form-group half">
+                    <label>Expiry Date</label>
+                    <input
+                      type="date"
+                      name="medicine-expiry-date"
+                      id="medicine-expiry-date-input"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="notes">Additional Notes (Optional)</label>
+                  <textarea
+                    placeholder="Any specific notes..."
+                    name="notes"
+                    id="notes-input"
+                  ></textarea>
+                </div>
+
+                <div class="form-actions">
+                  <button type="submit" class="submit-btn normal-size">
+                    Create Request
+                  </button>
+                  <button
+                    type="button"
+                    data-close-button
+                    class="cancel-btn normal-size"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="overlay" id="overlay"></div>
         </div>
 
         <div class="medicines-filters">

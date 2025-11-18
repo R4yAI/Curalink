@@ -14,7 +14,7 @@
     <script defer src="/src/JS/highlightnav.js"></script>
     <script defer src="/src/JS/sidebarActive.js"></script>
     <script defer src="/src/JS/modal.js"></script>
-
+    <script defer src="/src/JS/validation_engine.js"></script>
     <title>Requests</title>
   </head>
 
@@ -23,10 +23,16 @@
       <nav class="navbar">
         <a class="logo">LOGO</a>
         <ul class="navbar-menu">
-          <li class="navbar-item"><a class="navbar-link" href="">Home</a></li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="/index.html">Home</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="/src/pages/Dashboard.html"
+              >Dashboard</a
+            >
+          </li>
           <li class="navbar-item"><a class="navbar-link">About</a></li>
           <li class="navbar-item"><a class="navbar-link">Contact</a></li>
-          <li class="navbar-item"><a class="navbar-link">Dashboard</a></li>
         </ul>
 
         <div class="hamburger-menu">
@@ -100,14 +106,14 @@
               Describe what medicine or equipment you need.
             </p>
 
-            <form id="create-request-form">
+            <form id="create-request-form" action="/">
               <div class="form-group">
-                <label>Medicine Name</label>
+                <label for="medicine-name">Medicine Name</label>
                 <input
                   type="text"
                   placeholder="e.g., Metformin 500mg"
-                  name="medicine"
-                  required
+                  name="medicine-name"
+                  id="medicine-name-input"
                 />
               </div>
 
@@ -117,13 +123,13 @@
                   <input
                     type="text"
                     placeholder="e.g., 30 tablets"
-                    name="quantity"
-                    required
+                    name="medicine-quantity"
+                    id="medicine-quantity-input"
                   />
                 </div>
                 <div class="form-group half">
-                  <label>Urgency</label>
-                  <select name="urgency" required>
+                  <label for="medicine-urgency">Urgency</label>
+                  <select name="medicine-urgency">
                     <option value="">Select urgency</option>
                     <option value="low">Low</option>
                     <option value="medium">Medium</option>
@@ -133,20 +139,21 @@
               </div>
 
               <div class="form-group">
-                <label>Location</label>
+                <label for="location">Location</label>
                 <input
                   type="text"
                   placeholder="e.g., Downtown"
                   name="location"
-                  required
+                  id="location-input"
                 />
               </div>
 
               <div class="form-group">
-                <label>Additional Notes (Optional)</label>
+                <label for="notes">Additional Notes (Optional)</label>
                 <textarea
                   placeholder="Any specific requirements..."
                   name="notes"
+                  id="notes-input"
                 ></textarea>
               </div>
 
