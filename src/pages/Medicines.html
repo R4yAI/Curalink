@@ -3,10 +3,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />      
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
@@ -20,10 +20,10 @@
       <nav class="navbar">
         <a class="logo">LOGO</a>
         <ul class="navbar-menu">
-          <li class="navbar-item"><a class="navbar-link" href="">Home</a></li>  
+          <li class="navbar-item"><a class="navbar-link" href="">Home</a></li>
           <li class="navbar-item"><a class="navbar-link">About</a></li>
-          <li class="navbar-item"><a class="navbar-link">Contact</a></li>       
-          <li class="navbar-item"><a class="navbar-link">Dashboard</a></li>     
+          <li class="navbar-item"><a class="navbar-link">Contact</a></li>
+          <li class="navbar-item"><a class="navbar-link">Dashboard</a></li>
         </ul>
         <div><a class="profile">profile</a></div>
       </nav>
@@ -38,23 +38,23 @@
           <a class="sidebar-link" href="/src/pages/Medicines.html">Medicines</a>
         </li>
         <li class="sidebar-item">
-          <a class="sidebar-link" href="/src/pages/Requests.html">Requests</a>  
+          <a class="sidebar-link" href="/src/pages/Requests.html">Requests</a>
         </li>
         <li class="sidebar-item">
           <a class="sidebar-link" href="/src/pages/Community.html">Community</a>
         </li>
         <li class="sidebar-item">
-          <a class="sidebar-link" href="/src/pages/Messages.html">Messages</a>  
+          <a class="sidebar-link" href="/src/pages/Messages.html">Messages</a>
         </li>
         <li class="sidebar-item">
-          <a class="sidebar-link" href="/src/pages/Profile.html">Profile</a>    
+          <a class="sidebar-link" href="/src/pages/Profile.html">Profile</a>
         </li>
       </ul>
 
       <div class="sidebar-footer">
         <button class="theme-toggle">
           <div class="theme-label">
-            <span class="theme-icon material-symbols-rounded">dark_mode</span>  
+            <span class="theme-icon material-symbols-rounded">dark_mode</span>
             <span class="theme-text">Dark Mode</span>
           </div>
           <div class="theme-toggle-track">
@@ -69,17 +69,23 @@
         <div class="medicines-header">
           <div class="medicines-title-section">
             <h1 class="medicines-title">Medicines</h1>
-            <p class="medicines-subtitle">Browse and manage available medicines</p>
+            <p class="medicines-subtitle">
+              Browse and manage available medicines
+            </p>
           </div>
           <button class="btn-donate-medicine">Donate Medicine</button>
         </div>
 
         <div class="medicines-filters">
           <div class="search-container">
-            <input type="text" class="search-input" placeholder="Search medicines by name, category, or condition..." />
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Search medicines by name, category, or condition..."
+            />
             <span class="search-icon">🔍</span>
           </div>
-          
+
           <div class="filter-group">
             <select class="filter-select" id="category-filter">
               <option value="">All Categories</option>
@@ -89,7 +95,7 @@
               <option value="chronic">Chronic Disease</option>
               <option value="other">Other</option>
             </select>
-            
+
             <select class="filter-select" id="status-filter">
               <option value="">All Status</option>
               <option value="available">Available</option>
@@ -102,7 +108,11 @@
         <div class="medicines-grid" id="medicines-grid">
           <!-- Medicine cards will be dynamically added here -->
           <div class="medicine-card-wrapper">
-            <input type="checkbox" id="donors-popup-1" class="donors-popup-toggle" />
+            <input
+              type="checkbox"
+              id="donors-popup-1"
+              class="donors-popup-toggle"
+            />
             <label for="donors-popup-1" class="medicine-card-clickable">
               <div class="medicine-card">
                 <div class="medicine-card-header">
@@ -111,7 +121,9 @@
                 </div>
                 <div class="medicine-card-body">
                   <h3 class="medicine-name">Amoxicillin 500mg</h3>
-                  <p class="medicine-description">Broad-spectrum antibiotic for bacterial infections</p>
+                  <p class="medicine-description">
+                    Broad-spectrum antibiotic for bacterial infections
+                  </p>
                   <div class="medicine-details">
                     <div class="medicine-detail-item">
                       <span class="detail-label">Expiry:</span>
@@ -132,47 +144,51 @@
                 </div>
               </div>
             </label>
-            
+
             <!-- Donors Table (appears below card) -->
             <div class="donors-table-wrapper">
               <div class="donors-table-container">
                 <h4 class="donors-table-title">Donors for Amoxicillin 500mg</h4>
-                                 <table class="donors-table">
-                   <thead>
-                     <tr>
-                       <th>Name</th>
-                       <th>Location</th>
-                       <th>Quantity</th>
-                       <th>Expiry</th>
-                     </tr>
-                   </thead>
-                   <tbody>
-                     <tr>
-                       <td>Dr. Ahmed Benali</td>
-                       <td>Algiers</td>
-                       <td>10 tablets</td>
-                       <td>12/2025</td>
-                     </tr>
-                     <tr>
-                       <td>Sarah Mansouri</td>
-                       <td>Oran</td>
-                       <td>10 tablets</td>
-                       <td>12/2025</td>
-                     </tr>
-                     <tr>
-                       <td>Mohamed Khadra</td>
-                       <td>Constantine</td>
-                       <td>5 tablets</td>
-                       <td>11/2025</td>
-                     </tr>
-                   </tbody>
-                 </table>
+                <table class="donors-table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Location</th>
+                      <th>Quantity</th>
+                      <th>Expiry</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Dr. Ahmed Benali</td>
+                      <td>Algiers</td>
+                      <td>10 tablets</td>
+                      <td>12/2025</td>
+                    </tr>
+                    <tr>
+                      <td>Sarah Mansouri</td>
+                      <td>Oran</td>
+                      <td>10 tablets</td>
+                      <td>12/2025</td>
+                    </tr>
+                    <tr>
+                      <td>Mohamed Khadra</td>
+                      <td>Constantine</td>
+                      <td>5 tablets</td>
+                      <td>11/2025</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
 
           <div class="medicine-card-wrapper">
-            <input type="checkbox" id="donors-popup-2" class="donors-popup-toggle" />
+            <input
+              type="checkbox"
+              id="donors-popup-2"
+              class="donors-popup-toggle"
+            />
             <label for="donors-popup-2" class="medicine-card-clickable">
               <div class="medicine-card">
                 <div class="medicine-card-header">
@@ -181,7 +197,9 @@
                 </div>
                 <div class="medicine-card-body">
                   <h3 class="medicine-name">Paracetamol 500mg</h3>
-                  <p class="medicine-description">For pain relief and fever reduction</p>
+                  <p class="medicine-description">
+                    For pain relief and fever reduction
+                  </p>
                   <div class="medicine-details">
                     <div class="medicine-detail-item">
                       <span class="detail-label">Expiry:</span>
@@ -202,41 +220,45 @@
                 </div>
               </div>
             </label>
-            
+
             <!-- Donors Table (appears below card) -->
             <div class="donors-table-wrapper">
               <div class="donors-table-container">
                 <h4 class="donors-table-title">Donors for Paracetamol 500mg</h4>
-                                 <table class="donors-table">
-                   <thead>
-                     <tr>
-                       <th>Name</th>
-                       <th>Location</th>
-                       <th>Quantity</th>
-                       <th>Expiry</th>
-                     </tr>
-                   </thead>
-                   <tbody>
-                     <tr>
-                       <td>Fatima Bensalem</td>
-                       <td>Oran</td>
-                       <td>15 tablets</td>
-                       <td>06/2026</td>
-                     </tr>
-                     <tr>
-                       <td>Karim Tounsi</td>
-                       <td>Algiers</td>
-                       <td>15 tablets</td>
-                       <td>06/2026</td>
-                     </tr>
-                   </tbody>
-                 </table>
+                <table class="donors-table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Location</th>
+                      <th>Quantity</th>
+                      <th>Expiry</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Fatima Bensalem</td>
+                      <td>Oran</td>
+                      <td>15 tablets</td>
+                      <td>06/2026</td>
+                    </tr>
+                    <tr>
+                      <td>Karim Tounsi</td>
+                      <td>Algiers</td>
+                      <td>15 tablets</td>
+                      <td>06/2026</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
 
           <div class="medicine-card-wrapper">
-            <input type="checkbox" id="donors-popup-3" class="donors-popup-toggle" />
+            <input
+              type="checkbox"
+              id="donors-popup-3"
+              class="donors-popup-toggle"
+            />
             <label for="donors-popup-3" class="medicine-card-clickable">
               <div class="medicine-card">
                 <div class="medicine-card-header">
@@ -245,7 +267,9 @@
                 </div>
                 <div class="medicine-card-body">
                   <h3 class="medicine-name">Vitamin D3 1000 IU</h3>
-                  <p class="medicine-description">Essential vitamin for bone health</p>
+                  <p class="medicine-description">
+                    Essential vitamin for bone health
+                  </p>
                   <div class="medicine-details">
                     <div class="medicine-detail-item">
                       <span class="detail-label">Expiry:</span>
@@ -266,35 +290,35 @@
                 </div>
               </div>
             </label>
-            
+
             <!-- Donors Table (appears below card) -->
             <div class="donors-table-wrapper">
               <div class="donors-table-container">
-                <h4 class="donors-table-title">Donors for Vitamin D3 1000 IU</h4>
-                                 <table class="donors-table">
-                   <thead>
-                     <tr>
-                       <th>Name</th>
-                       <th>Location</th>
-                       <th>Quantity</th>
-                       <th>Expiry</th>
-                     </tr>
-                   </thead>
-                   <tbody>
-                     <tr>
-                       <td>Nour Benmoussa</td>
-                       <td>Constantine</td>
-                       <td>60 capsules</td>
-                       <td>09/2025</td>
-                     </tr>
-                   </tbody>
-                 </table>
+                <h4 class="donors-table-title">
+                  Donors for Vitamin D3 1000 IU
+                </h4>
+                <table class="donors-table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Location</th>
+                      <th>Quantity</th>
+                      <th>Expiry</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Nour Benmoussa</td>
+                      <td>Constantine</td>
+                      <td>60 capsules</td>
+                      <td>09/2025</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
         </div>
-
-
       </section>
     </main>
 
