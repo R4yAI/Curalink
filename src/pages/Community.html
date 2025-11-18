@@ -11,9 +11,9 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script defer src="/src/JS/community.js"></script>
     <script defer src="/src/JS/highlightnav.js"></script>
-    <script defer src="/src/JS/sidebarActive.js"></script>
-    <title>Requests</title>
+    <title>Community</title>
   </head>
 
   <body>
@@ -36,39 +36,231 @@
       </nav>
     </header>
 
-    <nav class="sidebar">
-      <ul class="sidebar-menu">
-        <li class="sidebar-item">
-          <a class="sidebar-link" href="/src/pages/Dashboard.html">Dashboard</a>
-        </li>
-        <li class="sidebar-item">
-          <a class="sidebar-link" href="/src/pages/Medicines.html">Medicines</a>
-        </li>
-        <li class="sidebar-item">
-          <a class="sidebar-link" href="/src/pages/Requests.html">Requests</a>
-        </li>
-        <li class="sidebar-item">
-          <a class="sidebar-link" href="/src/pages/Community.html">Community</a>
-        </li>
-        <li class="sidebar-item">
-          <a class="sidebar-link" href="/src/pages/Messages.html">Messages</a>
-        </li>
-        <li class="sidebar-item">
-          <a class="sidebar-link" href="/src/pages/Profile.html">Profile</a>
-        </li>
-      </ul>
+    <div class="layout">
+      <nav class="sidebar">
+        <ul class="sidebar-menu">
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="/src/pages/Dashboard.html"
+              >Dashboard</a
+            >
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="/src/pages/Medicines.html"
+              >Medicines</a
+            >
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="/src/pages/Requests.html">Requests</a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="/src/pages/Community.html"
+              >Community</a
+            >
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="/src/pages/Messages.html">Messages</a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="/src/pages/Profile.html">Profile</a>
+          </li>
+        </ul>
 
-      <div class="sidebar-footer">
-        <button class="theme-toggle">
-          <div class="theme-label">
-            <span class="theme-icon material-symbols-rounded">dark_mode</span>
-            <span class="theme-text">Dark Mode</span>
+        <div class="sidebar-footer">
+          <li class="theme-toggle">
+            <div class="theme-label">
+              <span class="theme-icon material-symbols-rounded">dark_mode</span>
+              <span class="theme-text">Dark Mode</span>
+            </div>
+            <div class="theme-toggle-track">
+              <div class="theme-toggle-indicator"></div>
+            </div>
+          </li>
+        </div>
+      </nav>
+
+      <main>
+        <div id="title">
+          <div id="title_image">
+            <img src="/images/peaple.svg" />
           </div>
-          <div class="theme-toggle-track">
-            <div class="theme-toggle-indicator"></div>
+          <p>Community Events</p>
+        </div>
+        <p id="desc">
+          Join blood donation drives, equipment donations, and awareness events.
+        </p>
+        <div id="event-operations">
+          <div class="custom-select">
+            <div class="selected">All Events</div>
+            <ul class="options">
+              <li data-filter="all-events">All Events</li>
+              <li data-filter="blood-donation">Blood Donation</li>
+              <li data-filter="equipment-donation">Equipment Donation</li>
+              <li data-filter="awareness">Awareness</li>
+            </ul>
           </div>
-        </button>
-      </div>
-    </nav>
+          <div class="create-event">
+            <img src="/images/plus.svg" />
+            <p>Create Event</p>
+          </div>
+        </div>
+
+        <div class="cards">
+          <div class="card" id="card1">
+            <div class="card-sign" id="card-sign1">
+              <img src="/images/drop.svg" />
+              <p>Blood</p>
+            </div>
+            <p class="p1">Blood Donation Drive - City Hospital</p>
+            <p class="p2">Organized by City Blood Bank</p>
+            <p class="p3">Help save lives! All blood types needed.</p>
+            <div class="card-desc">
+              <div class="desc-img">
+                <img src="/images/calendar.svg" />
+              </div>
+              <p>October 15, 2025 at 9:00 AM - 5:00 PM</p>
+            </div>
+            <div class="card-desc">
+              <div class="desc-img">
+                <img src="/images/maps.svg" />
+              </div>
+              <p>City Hospital, Main Building</p>
+            </div>
+            <div class="card-desc">
+              <div class="desc-img">
+                <img src="/images/grey peaple.svg" />
+              </div>
+              <p>45 / 100 participants</p>
+            </div>
+            <div class="join-share">
+              <div class="join">
+                <p>Join Event</p>
+              </div>
+              <div class="share">
+                <p>Share</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" id="card2">
+            <div class="card-sign" id="card-sign2">
+              <img src="/images/blue heart.svg" />
+              <p>Equipment</p>
+            </div>
+            <p class="p1">Medical Equipment Donation Event</p>
+            <p class="p2">Organized by Health For All Foundation</p>
+            <p class="p3">
+              Donate wheelchairs, walkers, and other medical equipment.
+            </p>
+            <div class="card-desc">
+              <div class="desc-img">
+                <img src="/images/calendar.svg" />
+              </div>
+              <p>October 20, 2025 at 10:00 AM - 3:00 PM</p>
+            </div>
+            <div class="card-desc">
+              <div class="desc-img">
+                <img src="/images/maps.svg" />
+              </div>
+              <p>Community Center, Downtown</p>
+            </div>
+            <div class="card-desc">
+              <div class="desc-img">
+                <img src="/images/grey peaple.svg" />
+              </div>
+              <p>23 / 50 participants</p>
+            </div>
+            <div class="join-share">
+              <div class="join">
+                <p>Join Event</p>
+              </div>
+              <div class="share">
+                <p>Share</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" id="card3">
+            <div class="card-sign" id="card-sign3">
+              <img src="/images/exclamation.svg" />
+              <p>Awareness</p>
+            </div>
+            <p class="p1">Health Awareness Workshop</p>
+            <p class="p2">Organized by Curalink Team</p>
+            <p class="p3">
+              Learn about safe medicine donation and storage practices.
+            </p>
+            <div class="card-desc">
+              <div class="desc-img">
+                <img src="/images/calendar.svg" />
+              </div>
+              <p>October 25, 2025 at 2:00 PM - 5:00 PM</p>
+            </div>
+            <div class="card-desc">
+              <div class="desc-img">
+                <img src="/images/maps.svg" />
+              </div>
+              <p>Public Library, Hall A</p>
+            </div>
+            <div class="card-desc">
+              <div class="desc-img">
+                <img src="/images/grey peaple.svg" />
+              </div>
+              <p>67 / 150 participants</p>
+            </div>
+            <div class="join-share">
+              <div class="join">
+                <p>Join Event</p>
+              </div>
+              <div class="share">
+                <p>Share</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" id="card4">
+            <div id="urgentBlood">
+              <div class="card-sign" id="card-sign1">
+                <img src="/images/drop.svg" />
+                <p>Blood</p>
+              </div>
+              <div class="card-sign" id="card-sign1">
+                <p>Urgent</p>
+              </div>
+            </div>
+            <p class="p1">Urgent Blood Donation - O Negative Needed</p>
+            <p class="p2">Organized by St. Mary's Blood Bank</p>
+            <p class="p3">Urgent need for O negative blood donors.</p>
+            <div class="card-desc">
+              <div class="desc-img">
+                <img src="/images/calendar.svg" />
+              </div>
+              <p>October 10, 2025 at All Day</p>
+            </div>
+            <div class="card-desc">
+              <div class="desc-img">
+                <img src="/images/maps.svg" />
+              </div>
+              <p>St. Mary's Hospital</p>
+            </div>
+            <div class="card-desc">
+              <div class="desc-img">
+                <img src="/images/grey peaple.svg" />
+              </div>
+              <p>12 / 30 participants</p>
+            </div>
+            <div class="join-share">
+              <div class="join">
+                <p>Join Event</p>
+              </div>
+              <div class="share">
+                <p>Share</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+
   </body>
 </html>
