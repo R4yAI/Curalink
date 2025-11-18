@@ -1,83 +1,282 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="/src/css/style.css" />
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/src/css/style.css" />
 
-    <title>Requests</title>
+    <!-- Additional fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital@0;1&family=Montserrat:ital,wght@0,100;1,100&family=Playwrite+DE+Grund+Guides&family=Roboto:ital,wght@0,100;1,100&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Home</title>
   </head>
 
   <body>
     <header>
       <nav class="navbar">
         <a class="logo">LOGO</a>
+
         <ul class="navbar-menu">
-          <li class="navbar-item"><a class="navbar-link" href="">Home</a></li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="/index.html">Home</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="/src/pages/Dashboard.html"
+              >Dashboard</a
+            >
+          </li>
           <li class="navbar-item"><a class="navbar-link">About</a></li>
           <li class="navbar-item"><a class="navbar-link">Contact</a></li>
         </ul>
+
         <div><a class="profile">login</a></div>
       </nav>
     </header>
 
     <main>
-      <div class="first_div">
+      <!-- FIRST SECTION -->
+      <div id="first_div">
         <div id="Trusted">
+          <div>
+            <img style="padding: 10px" class="star" src="/images/star.svg" />
+          </div>
+
           <p>Trusted by 3,200+ community members</p>
         </div>
 
-        <p id="s1">
-          Connecting medicines that <br />
-          are no longer needed with <br />
-          people who need them
-        </p>
-        <p id="s_sub">
-          Join our community to donate unused medicines, request <br />
-          essential supplies, and participate in blood donation events.
-        </p>
+        <div id="home-title">
+          <p id="page-title">
+            Connecting medicines that are no longer needed with people who need
+            them
+          </p>
 
-        <div id="donate_request">
-          <div>
-            <div>
-              <svg></svg>
-            </div>
-            <div id="donate">
-              <solid>Donate Medicine</solid>
-            </div>
-          </div>
-          <div id="request">
-            <solid>Request Medicine</solid>
+          <div id="home-invitation">
+            <p>
+              Join our community to donate unused medicines, request <br />
+              essential supplies, and participate in blood donation events.
+            </p>
           </div>
         </div>
 
-        <hr />
+        <div id="donate_request">
+          <div></div>
+
+          <div id="donate">
+            <div>
+              <img src="/images/heart.svg" />
+            </div>
+            <span>Donate Medicine</span>
+          </div>
+
+          <div id="request">
+            <div>
+              <img src="/images/Black box.svg" alt="box" />
+            </div>
+            <span>Request Medicine</span>
+          </div>
+
+          <div></div>
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- SECOND SECTION -->
+      <div class="second_div">
+        <div></div>
+
+        <div class="boxes">
+          <div class="smallBox">
+            <img src="/images/White box.svg" />
+          </div>
+          <p class="num">12,450</p>
+          <p class="string">Medicines Donated</p>
+        </div>
+
+        <div class="boxes">
+          <div class="smallBox">
+            <img src="/images/check.svg" />
+          </div>
+          <p class="num">8,320</p>
+          <p class="string">Requests Fulfilled</p>
+        </div>
+
+        <div class="boxes">
+          <div class="smallBox">
+            <img src="/images/peaple.svg" />
+          </div>
+          <p class="num">3,200+</p>
+          <p class="string">Active Members</p>
+        </div>
+
+        <div></div>
+      </div>
+
+      <hr />
+
+      <!-- THIRD SECTION -->
+      <div class="third_div">
+        <div class="simple-process">
+          <div>
+            <img class="zigzag" src="/images/zigzag.svg" />
+          </div>
+
+          <p>Simple Process</p>
+        </div>
+
+        <p id="div3p1">How It Works</p>
+        <p id="div3p2">
+          Three simple steps to make a difference in your community
+        </p>
+
+        <div id="divs">
+          <div class="div">
+            <div class="subdiv">
+              <div class="smallBox">
+                <img src="/images/peaple.svg" />
+              </div>
+
+              <div class="number">1</div>
+            </div>
+
+            <p class="divsp">Create Account</p>
+
+            <p class="description">
+              Sign up as an individual or pharmacy. Verify your identity to
+              build trust in the community.
+            </p>
+          </div>
+
+          <div class="div">
+            <div class="subdiv">
+              <div class="smallBox">
+                <img src="/images/White box.svg" />
+              </div>
+
+              <div class="number">2</div>
+            </div>
+
+            <p class="divsp">List or Request</p>
+
+            <p class="description">
+              Donate unused medicines or create a request for what you need. Our
+              system finds the best matches.
+            </p>
+          </div>
+
+          <div class="div">
+            <div class="subdiv">
+              <div class="smallBox">
+                <img src="/images/check.svg" />
+              </div>
+
+              <div class="number">3</div>
+            </div>
+
+            <p class="divsp">Connect & Help</p>
+
+            <p class="description">
+              Message matched donors or requesters, arrange safe pickup, and
+              track your impact on the dashboard.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- FOURTH SECTION -->
+      <div id="temp">
+        <div class="forth_div">
+          <div class="smallBox">
+            <img src="/images/shield.svg" />
+          </div>
+
+          <div>
+            <p id="p1">Safe & Verified Platform</p>
+            <p id="p2" class="description">
+              All users are verified to ensure trust and safety. We follow
+              strict guidelines for medicine donation and maintain transparency
+              throughout the process.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FIFTH SECTION -->
+      <div class="fiveth_div">
+        <p id="div5p1">Ready to Make a Difference?</p>
+        <p id="div5p2">
+          Join thousands of people who are already helping their community
+          through Curalink.
+        </p>
+
+        <div id="div5">
+          <p>Get Started</p>
+          <img src="/images/arrow.svg" />
+        </div>
+      </div>
+    </main>
+
+    <footer class="sixth_div">
+      <div id="div6">
+        <div>
+          <img src="/images/logo.jpg" />
+          <p>
+            Connecting medicines that are no longer needed with people who need
+            them.
+          </p>
+        </div>
+
+        <div>
+          <p class="prcp">Platform</p>
+          <p class="sub">Browse</p>
+          <p class="sub">Donate</p>
+          <p class="sub">Events</p>
+          <p class="sub">Request</p>
+        </div>
+
+        <div>
+          <p class="prcp">Company</p>
+          <p class="sub">About Us</p>
+          <p class="sub">Contact</p>
+          <p class="sub">Privacy Policy</p>
+          <p class="sub">Terms of Service</p>
+        </div>
+
+        <div>
+          <p class="prcp">Support</p>
+          <p class="sub">Help Center</p>
+          <p class="sub">Safety Guidelines</p>
+          <p class="sub">Community</p>
+          <p class="sub">FAQ</p>
+        </div>
       </div>
 
       <div>
-        <div></div>
-
-        <div></div>
-
-        <div></div>
+        <hr />
+        <p>
+          © 2025 Curalink. All rights reserved. Made with
+          <span style="color: rgb(35, 164, 147); font-size: 15px"
+            >&#10084;</span
+          >
+          for the community.
+        </p>
       </div>
-
-      <div></div>
-
-      <div></div>
-
-      <div></div>
-
-      <div></div>
-    </main>
-    <script src="/src/JS/highlightnav.js"></script>
+    </footer>
   </body>
 </html>

@@ -16,6 +16,10 @@
       rel="stylesheet"
     />
 
+    <script defer src="/src/JS/highlightnav.js"></script>
+    <script defer src="/src/JS/sidebarActive.js"></script>
+    <script defer src="/src/JS/modal.js"></script>
+
     <title>Profile</title>
   </head>
 
@@ -133,8 +137,63 @@
           </button>
 
 
-          <div class="profile-button">
-            <a href="ID-verification.html"> Upload ID </a>
+          <button
+            data-modal-target="#edit-profile-modal"
+            class="profile-button"
+          >
+            Edit Profile
+          </button>
+
+          <div class="modal" id="edit-profile-modal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2>Edit Profile</h2>
+                <button data-close-button class="close-button">&times;</button>
+              </div>
+              <p class="modal-subtitle">Update your profile information.</p>
+
+              <form class="modal-form">
+                <div class="form-group">
+                  <label>Full name</label>
+                  <input type="text" placeholder="John Doe" />
+                </div>
+
+                <div class="form-group">
+                  <label>Email</label>
+                  <input text="email" placeholder="john.doe@email.com" />
+                </div>
+
+                <div class="form-group">
+                  <label>Phone</label>
+                  <input type="tel" placeholder="+(555)123-4567" />
+                </div>
+
+                <div class="form-group">
+                  <label>Location</label>
+                  <input type="text" placeholder="Downtown, City Center" />
+                </div>
+
+                <div class="form-actions">
+                  <button type="submit" class="submit-btn normal-size">
+                    Create Request
+                  </button>
+                  <button
+                    type="button"
+                    data-close-button
+                    class="cancel-btn normal-size"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="overlay" id="overlay"></div>
+
+          <div>
+            <a href="ID-verification.html" class="profile-button-ele"
+              >Upload ID</a
+            >
           </div>
         </div>
 
@@ -242,7 +301,4 @@
       </div>
     </div>
   </body>
-  <script src="/src/JS/highlightnav.js" defer></script>
-  <script src="/src/JS/sidebarActive.js" defer></script>
-  <script src="/src/JS/profile_card.js" defer></script>
 </html>
