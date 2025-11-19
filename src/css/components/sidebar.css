@@ -83,7 +83,9 @@
 }
 
 
-
+.theme-toggle{
+  display: none;
+}
 
 body {
   background: var(--color-bg);

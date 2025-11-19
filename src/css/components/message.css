@@ -1,0 +1,507 @@
+.chat-fram{
+  position: fixed;
+  top: 150px;          
+  left: 300px;         
+  right: 20px;         
+  height: 500px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+   gap:0;
+   flex-wrap: wrap;
+}
+
+
+.top-des{
+    display: flex;
+    position: relative;
+    left:300px;
+    top:70px;
+    gap:15px;
+
+}
+.text h2{
+    margin-bottom: 5px;
+}
+.message_pic{
+  border-radius: 50%; 
+    text-align: center;
+    width: 50px;     
+    height: 50px;
+    overflow: hidden;   /* coupe ce qui dépasse du rond */
+    align-self: center; 
+}
+
+.contact-container {
+background-color: rgb(251, 252, 253);
+width: 35%;  
+height: 100%;
+display: flex;
+flex-direction: column;
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+border: 2px solid rgba(132, 132, 132, 0.4);
+padding: 5px;
+
+}
+.contact-search{
+border-bottom: 2px solid rgba(132, 132, 132, 0.4);
+padding-bottom: 20px;
+padding-left:20px;
+padding-top:10px ;
+}
+
+#contactSearch{
+width: 100%;
+padding:10px;
+border: 2px solid hsl(162, 60%, 42%);
+border-radius: 20px;
+
+
+}
+
+#contactSearch:focus{
+box-shadow: 1px 1px 4px  hsl(162, 66%, 33%);
+border: 2px solid hsl(162, 60%, 42%);
+
+}
+
+
+#contactSearch:active{
+box-shadow: 1px 1px 4px  hsl(162, 66%, 33%);
+border: 2px solid hsl(162, 60%, 42%);
+
+}
+.contacts-frame{
+border-top: 2px solid rgba(132, 132, 132, 0.4);
+display: flex;
+flex-direction: column;
+gap:5px;
+padding-top: 20px;
+}
+
+.contact{
+
+    display: flex;
+    flex-direction: row;
+    padding: 10px 5px;
+
+}
+.contact-pic{
+    border-radius: 50%; 
+    text-align: center;
+    width: 45px;     
+    height: 45px;
+    overflow: hidden;   /* coupe ce qui dépasse du rond */
+    align-self: center; /* centre dans le conteneur */
+    margin-right: 10px;
+    position: relative;
+}
+
+.contact-info h2{
+    font-size: 15px;
+}
+.contact-info p{
+    margin-top: 10px;
+    font-size: 15px;
+     width: 260px;
+}
+.chat-info {
+  display: flex;      /* plus simple que grid pour 2 éléments */
+  flex-direction: column;
+  align-items: flex-end; /* tout à droite */
+  font-size: 15px;
+  color: rgb(176, 188, 188);
+  justify-content: center;
+  align-items: center;
+
+}
+.chiffre{
+    background-color :rgba(95, 158, 160, 0.562);
+    color: white;
+    border-radius:50%;
+    padding:5px;
+    margin-left:15px;
+    margin-top: 10px;
+  text-align: center;
+  width: 30px;
+}
+.contact:hover{
+background-color: rgba(212, 228, 212, 0.429);
+box-shadow: 1px 2px 6px rgba(40, 40, 40, 0.4);
+border-radius: 20px;
+}
+
+.contact.selected {
+background-color:hsl(162, 60%, 70% ,0.5);
+box-shadow: 1px 2px 6px rgba(40, 40, 40, 0.4);
+border-radius: 20px;
+border: 2px solid hsl(162, 60%, 42%);
+}
+
+.chat-box{
+background-color: rgb(250, 251, 252);
+width: 65%;
+height: 100%;
+ border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+border: 2px solid rgba(132, 132, 132, 0.4);
+display:flex;
+flex-direction:column;
+position: relative;
+}
+
+.top-conversation{
+display:flex;
+flex-direction:row;
+justify-content: space-between;
+box-shadow: 0 3px 3px gray;
+padding:3px 10px;
+position: relative;
+}
+
+.left{
+    font-size: 15px;
+    
+}
+.right{
+    display:flex;
+    flex-direction: row;
+    padding-right:10px;
+    padding-top: 5px;
+    gap: 20px;
+
+}
+
+
+.body-conversation{
+position:relative;
+
+}
+.send_message {
+  padding: 8px 12px;
+  margin: 5px 0;
+  background:  hsl(162, 60%, 92%);
+  width: fit-content;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  position:sticky;
+  left: 90%;
+ right:0px;
+}
+
+.received_message{
+ padding: 8px 12px;
+  margin: 5px 5px;
+  background:  hsl(220, 12%, 96%);
+  width: fit-content;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+
+}
+
+
+.bottom-conversation {
+display: flex;
+flex-direction: row;
+align-items: center;
+gap:20px;
+padding: 9px;
+border-radius: 10px;
+position: absolute;
+bottom: 0px;
+left: 0px;
+right: 0px;
+box-shadow: 0px -1.5px 3px gray;
+min-width: 100px;
+}
+
+.bottom-middle{
+margin-left:10px;
+border-radius: 14px;
+border:2px;
+padding:10px 10px;
+box-shadow: 1px 1px 3px gray;
+width: 100%;
+text-align: center;
+bottom:4px;
+display:flex;
+position: sticky;
+justify-content: space-between;
+
+}
+
+.message-box {
+flex: 1;
+border: none;
+background: transparent;
+resize: none;
+font-size: 15px;
+outline: none;
+width: 100%;     
+display: block;
+height: auto;
+padding-left: 10px;
+padding-top: 5px;
+padding-bottom: 5px;
+max-width: 400px;
+text-align: left;
+  
+}
+.message-box.selected{
+
+    box-shadow: 1px 2px 6px rgba(40, 40, 40, 0.4);
+    
+    border: 2px solid hsl(162, 60%, 42%);
+}
+
+.bottom-left{
+display: flex;
+flex-direction: row;
+gap:10px;
+position:relative;
+
+}
+#toggleBtn{
+    display: none;
+
+}
+#iconPanel {
+   display: none;
+    position: absolute;
+    bottom: 70px; /* au-dessus du bottom-conversation */
+    left: 10px;   /* aligné au bouton > */
+    background: white;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    flex-direction: column;
+    gap: 12px;
+    z-index: 999;
+}
+
+.bottom-right{
+    display:block;
+
+}
+
+.icon-btn,.icon-btn-send , .icon{
+background: none;
+border: none;
+font-size: 22px;
+cursor: pointer;
+box-shadow: none;
+align-items: center;
+justify-content: center;
+color:  hsl(162, 66%, 33%);
+cursor: pointer; 
+border-radius: 20px;  
+width: fit-content;
+height: fit-content;
+padding:5px;
+}
+
+#sendBtn {
+display: none;
+}
+
+#addFile { 
+  display: none;
+  background-color: hsl(162, 60%, 70%, 0.4);
+  border-radius: 10px;
+  width: 170px;
+  height: 100px;
+  padding: 10px;
+  color:black;
+  bottom: 65px;
+  position:absolute;
+}
+.file-btn {
+  display: inline-block;
+  padding: 8px 12px;
+  background: hsl(162, 60%, 70%);
+  border-radius: 10px;
+  cursor: pointer;
+  color: black;
+}
+
+.icon-btn:hover{
+    box-shadow: 1px 1px 4px  hsl(162, 66%, 33%);
+}
+.icon:hover{
+    box-shadow: 1px 1px 4px  hsl(162, 66%, 33%);
+}
+.bottom-middle:hover{
+    box-shadow: 1px 1px 4px  hsl(162, 66%, 33%);
+}
+
+
+@media(max-width: 900px){
+
+   .contact-info{
+    padding-top:10px;
+    text-align: center;
+   }
+   .contact-info p{
+    display:none;
+   } 
+    .contact-info h2{
+        font-size: 13px;
+    }
+   .chat-info{
+    display:none;
+   }
+
+   .contact-pic{
+    width: 25px;
+    height: 25px;
+   }
+   
+   /* Pied de conversation : tout sur une ligne fluide */
+  .bottom-conversation {
+    gap: 5px;
+    padding: 6px;
+  }
+
+  /* Les icônes rétrécissent */
+  .bottom-left button,
+  .right button {
+    transform: scale(0.8);
+  }
+
+  /* La zone de texte prend TOUT l’espace */
+  .bottom-middle {
+    width: 90%;
+    margin: 0 5px; 
+    flex: 1;
+  }
+
+  .message-box {
+    max-width: 100%;
+    width: 100%;
+   max-width: 200px;
+  }
+
+   /* le panel vertical quand on active */
+  #iconPanel.active {
+      display: flex;
+      margin-bottom: 3px;
+     box-shadow:0 0 0 rgb(255, 255, 255 , 0.5);
+     gap:0px;
+     padding: 0 0;
+    
+  }
+
+#toggleBtn{
+display: block;
+background: none;
+border: none;
+font-size: 22px;
+cursor: pointer;
+box-shadow: none;
+color:  hsl(162, 66%, 33%);
+cursor: pointer; 
+
+}
+
+  #toggleBtn:hover{
+    box-shadow: 1px 1px 4px  hsl(162, 66%, 33%);
+
+}
+
+  .bottom-left .icon-btn:not(#toggleBtn) {
+      display: none;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  /* Le frame du chat colle à gauche */
+  .chat-fram {
+    left: 0;
+    width: 100%;
+  }
+
+   .top-des{
+    left: 10px;
+    width: 100%;
+   }
+   .contact-info{
+    padding-top:10px;
+    text-align: center;
+   }
+   .contact-info p{
+    display:none;
+   } 
+    .contact-info h2{
+        font-size: 13px;
+    }
+   .chat-info{
+    display:none;
+   }
+   /* Pied de conversation : tout sur une ligne fluide */
+  .bottom-conversation {
+    gap: 5px;
+    padding: 6px;
+  }
+
+  /* Les icônes rétrécissent */
+  .bottom-left button,
+  .right button {
+    transform: scale(0.8);
+  }
+
+  /* La zone de texte prend TOUT l’espace */
+  .bottom-middle {
+    width: 90%;
+    margin: 0 5px; 
+    flex: 1;
+  }
+
+  .message-box {
+    max-width: 100%;
+    width: 100%;
+   max-width: 200px;
+  }
+
+  .send_message {
+    margin-right:10px;
+  }
+   /* le panel vertical quand on active */
+  #iconPanel.active {
+      display: flex;
+      margin-bottom: 3px;
+     box-shadow:0 0 0 rgb(255, 255, 255 , 0.5);
+     gap:0px;
+     padding: 0 0;
+    
+  }
+
+#toggleBtn{
+display: block;
+background: none;
+border: none;
+font-size: 22px;
+cursor: pointer;
+box-shadow: none;
+color:  hsl(162, 66%, 33%);
+cursor: pointer; 
+
+}
+
+  #toggleBtn:hover{
+    box-shadow: 1px 1px 4px  hsl(162, 66%, 33%);
+
+}
+
+  .bottom-left .icon-btn:not(#toggleBtn) {
+      display: none;
+  }
+
+}
