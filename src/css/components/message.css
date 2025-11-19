@@ -49,10 +49,32 @@ padding: 5px;
 }
 .contact-search{
 border-bottom: 2px solid rgba(132, 132, 132, 0.4);
+padding-bottom: 20px;
+padding-left:20px;
+padding-top:10px ;
+}
+
+#contactSearch{
+width: 100%;
+padding:10px;
+border: 2px solid hsl(162, 60%, 42%);
+border-radius: 20px;
+
+
+}
+
+#contactSearch:focus{
+box-shadow: 1px 1px 4px  hsl(162, 66%, 33%);
+border: 2px solid hsl(162, 60%, 42%);
 
 }
 
 
+#contactSearch:active{
+box-shadow: 1px 1px 4px  hsl(162, 66%, 33%);
+border: 2px solid hsl(162, 60%, 42%);
+
+}
 .contacts-frame{
 border-top: 2px solid rgba(132, 132, 132, 0.4);
 display: flex;
@@ -153,12 +175,7 @@ position: relative;
     gap: 20px;
 
 }
-.icon{
-    width: 30px;
-    height:20px ;
-    color: hsl(162, 66%, 33%);
-     cursor: pointer;
-}
+
 
 .body-conversation{
 position:relative;
@@ -176,6 +193,7 @@ position:relative;
   left: 90%;
  right:0px;
 }
+
 .received_message{
  padding: 8px 12px;
   margin: 5px 5px;
@@ -192,7 +210,7 @@ position:relative;
 display: flex;
 flex-direction: row;
 align-items: center;
-gap:10px;
+gap:20px;
 padding: 9px;
 border-radius: 10px;
 position: absolute;
@@ -207,12 +225,14 @@ min-width: 100px;
 margin-left:10px;
 border-radius: 14px;
 border:2px;
+padding:10px 10px;
 box-shadow: 1px 1px 3px gray;
 width: 100%;
 text-align: center;
 bottom:4px;
 display:flex;
 position: sticky;
+justify-content: space-between;
 
 }
 
@@ -223,7 +243,7 @@ background: transparent;
 resize: none;
 font-size: 15px;
 outline: none;
-width: 70%;     
+width: 100%;     
 display: block;
 height: auto;
 padding-left: 10px;
@@ -242,8 +262,10 @@ text-align: left;
 
 .bottom-left{
 display: flex;
-gap:0px;
+flex-direction: row;
+gap:10px;
 position:relative;
+
 }
 #toggleBtn{
     display: none;
@@ -268,14 +290,20 @@ position:relative;
 
 }
 
-.icon-btn,.icon-btn-send{
+.icon-btn,.icon-btn-send , .icon{
 background: none;
 border: none;
 font-size: 22px;
 cursor: pointer;
 box-shadow: none;
+align-items: center;
+justify-content: center;
 color:  hsl(162, 66%, 33%);
-cursor: pointer;   
+cursor: pointer; 
+border-radius: 20px;  
+width: fit-content;
+height: fit-content;
+padding:5px;
 }
 
 #sendBtn {
@@ -305,7 +333,9 @@ display: none;
 .icon-btn:hover{
     box-shadow: 1px 1px 4px  hsl(162, 66%, 33%);
 }
-
+.icon:hover{
+    box-shadow: 1px 1px 4px  hsl(162, 66%, 33%);
+}
 .bottom-middle:hover{
     box-shadow: 1px 1px 4px  hsl(162, 66%, 33%);
 }
