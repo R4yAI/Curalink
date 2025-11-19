@@ -1,43 +1,43 @@
- 
- *::before,
+*::before,
 *::after {
   box-sizing: border-box;
 }
 body {
-  overflow-x: hidden;  /* cache la barre de scroll horizontale */
-  overflow-y: auto;    /* laisse la barre verticale intacte */
+  overflow-x: hidden; /* cache la barre de scroll horizontale */
+  overflow-y: auto; /* laisse la barre verticale intacte */
 }
- 
- .main-content {
-    height: 100vh;
-    flex:1;
-  }
 
- .profile-container{
-   display:flex;
-   flex-direction: row;
-    top: 100px;
-    position: relative;
-    bottom:0px;
-   left:10px;
-   flex-wrap: wrap;
+.main-content {
+  height: 100vh;
+  flex: 1;
+}
 
- }
- @media(max-width:1100px) {
-  .main-content{
-    margin-left:0px;
+.profile-container {
+  display: flex;
+  flex-direction: row;
+  top: 100px;
+  position: relative;
+  bottom: 0px;
+  left: 10px;
+  flex-wrap: wrap;
+}
+@media (max-width: 1100px) {
+  .main-content {
+    margin-left: 0px;
     padding-right: 35px;
- 
   }
-   .profile-container {
+  .profile-container {
     flex-direction: column;
   }
+}
 
- }
-
-   @media (max-width: 700px) {
+@media (max-width: 700px) {
   .main-content {
-      margin-left: 0;
-      padding-left:10px;
+    margin-left: 0;
+    padding-left: 10px;
+  }
+  .hamburger-menu {
+    display: block; /* Visible sur mobile */
+    padding-inline-end: 10px;
   }
 }
