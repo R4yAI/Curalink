@@ -5,6 +5,12 @@
   padding: 2.5rem;
 }
 
+.requests-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /* === Card Styling === */
 .card {
   background: #ffffff;
@@ -108,12 +114,12 @@
 /* === Buttons === */
 button.primary {
   flex: 1;
-  background: linear-gradient(to right, #34d399, #06b6d4);
+  background: var(--color-primary);
   border: none;
   color: white;
   font-weight: 500;
   border-radius: 999px;
-  padding: 0.6rem 1rem;
+  padding: 0.3rem 0.3rem;
   cursor: pointer;
   transition: opacity 0.2s ease;
 }
