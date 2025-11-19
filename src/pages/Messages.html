@@ -15,7 +15,10 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <title>Messages</title>
   </head>
 
@@ -29,6 +32,7 @@
           <li class="navbar-item"><a class="navbar-link">Contact</a></li>
           <li class="navbar-item"><a class="navbar-link">Dashboard</a></li>
         </ul>
+
         <div><a class="profile">profile</a></div>
       </nav>
     </header>
@@ -69,7 +73,9 @@
     </nav>
 
     <div class="top-des">
-      <div class="message_pic"><img src="/images/message.jpg" /></div>
+      <div class="message_pic">
+        <i class="fa-regular fa-message" id="message_Icon"></i>
+      </div>
       <div class="text">
         <h2>Messages</h2>
 
@@ -91,12 +97,14 @@
 
         <div class="contacts-frame">
           <!-- 1ER contacte -->
-          <div class="contact">
+          <div class="contact" data-chat="chat1">
+            <!-- data-* attributes are a standard way in HTML5 to store custom data for JS.
+                                                        chatId will now be "chat1"||chat2" ||chat3||chat4.-->
             <div class="contact-pic">
               <img src="/images/photo_profile.jpg" />
             </div>
             <div class="contact-info">
-              <h2>Kai Lakestone</h2>
+              <h2 class="contact_name">Kai Lakestone</h2>
               <p>thanks! i will pick it tomrow</p>
             </div>
             <div class="chat-info">
@@ -105,12 +113,12 @@
             </div>
           </div>
           <!-- 2éme contacte -->
-          <div class="contact">
+          <div class="contact" data-chat="chat2">
             <div class="contact-pic">
               <img src="/images/Tik tok profile picture.jpg" />
             </div>
             <div class="contact-info">
-              <h2>Preto Cruz</h2>
+              <h2 class="contact_name">Preto Cruz</h2>
               <p>the insuline is still available</p>
             </div>
             <div class="chat-info">
@@ -120,12 +128,12 @@
 
           <!-- 3éme contacte -->
 
-          <div class="contact">
+          <div class="contact" data-chat="chat3">
             <div class="contact-pic">
               <img src="/images/photo_profile3.jpg" />
             </div>
             <div class="contact-info">
-              <h2>Asher Scoot</h2>
+              <h2 class="contact_name">Asher Scoot</h2>
               <p>can we meet at 3 PM</p>
             </div>
             <div class="chat-info">
@@ -136,12 +144,12 @@
 
           <!-- 4éme contacte -->
 
-          <div class="contact">
+          <div class="contact" data-chat="chat4">
             <div class="contact-pic">
               <img src="/images/photo2.jpg" />
             </div>
             <div class="contact-info">
-              <h2>Iris Samsone</h2>
+              <h2 class="contact_name">Iris Samsone</h2>
               <p>perfect,see you then!</p>
             </div>
             <div class="chat-info">
@@ -153,11 +161,13 @@
 
       <div class="chat-box">
         <div class="top-conversation">
-          <div class="left">
-            <h4>Kai Lakestone</h4>
-            <p>Active now</p>
+          <div class="top_left" id="top_left">
+            <h4 class="receiver_name" id="chat1">Kai Lakestone</h4>
+            <h4 class="receiver_name" id="chat2">Preto Cruz</h4>
+            <h4 class="receiver_name" id="chat3">Asher Scoot</h4>
+            <h4 class="receiver_name" id="chat">Iris Samasone</h4>
           </div>
-          <div class="right">
+          <div class="top_right">
             <div class="icon">
               <span class="material-symbols-outlined">videocam</span>
             </div>
@@ -169,7 +179,8 @@
             </div>
           </div>
         </div>
-        <div class="body-conversation" id="body-conv">
+        <!--Kai chat-->
+        <div class="body-conversation" id="chat1">
           <ul>
             <li class="send_message" id="send_message">
               <p>salut!</p>
@@ -177,8 +188,58 @@
             <li class="received_message">
               <p>hi!</p>
             </li>
+            <li class="received_message">
+              <p>i'm kai</p>
+            </li>
+            <li class="received_message">
+              <p>thanks! i will pick it tomrow</p>
+            </li>
           </ul>
         </div>
+        <!--Preto chat -->
+        <div class="body-conversation" id="chat2">
+          <ul>
+            <li class="send_message" id="send_message">
+              <p>salut!</p>
+            </li>
+            <li class="received_message">
+              <p>hi!</p>
+            </li>
+            <li class="received_message">
+              <p>i'm preto</p>
+            </li>
+          </ul>
+        </div>
+        <!--acher chat-->
+        <div class="body-conversation" id="chat3">
+          <ul>
+            <li class="send_message" id="send_message">
+              <p>salut!</p>
+            </li>
+            <li class="received_message">
+              <p>hi! i'm Asher</p>
+            </li>
+            <li class="received_message">
+              <p>i'm Asher</p>
+            </li>
+            <li class="received_message">
+              <p>can we meet at 3 PM</p>
+            </li>
+          </ul>
+        </div>
+
+        <!--iris chat-->
+        <div class="body-conversation" id="chat4">
+          <ul>
+            <li class="send_message" id="send_message">
+              <p>salut!</p>
+            </li>
+            <li class="received_message">
+              <p>hi! i'm iris</p>
+            </li>
+          </ul>
+        </div>
+
         <div class="bottom-conversation">
           <div class="bottom-left">
             <!-- ADD -->
@@ -186,7 +247,7 @@
               <span class="material-symbols-outlined"> add </span>
             </button>
             <div id="addFile">
-              <label for="fileInput" class="file-btn">Choisir un fichier</label>
+              <label for="fileInput" class="file-btn">upload file</label>
               <input
                 type="file"
                 id="fileInput"
@@ -270,7 +331,7 @@
         </div>
       </div>
     </div>
-    <script src="/src/JS/message.js"></script>
+    <script src="/src/JS/message.js" defer></script>
     <script src="/src/JS/highlightnav.js"></script>
   </body>
 </html>
