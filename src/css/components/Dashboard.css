@@ -1,0 +1,197 @@
+:root{
+  --primary: hsl(160,60%,25%);
+  --accent: hsl(160,60%,45%);
+  --muted: hsl(160,20%,40%);
+  --bg: hsl(210,20%,98%); /* cleaner, neutral page background */
+  --card-bg: #ffffff;
+  --radius: 12px;
+  --card-accent-start: hsl(160,60%,96%);
+  --card-accent-border: hsl(160,30%,90%);
+}
+
+/* Layout */
+.body-font{font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
+body{font-family:var(--body-font, Inter), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background: var(--bg); color: var(--muted);}
+.dashboard-main{max-width:1200px;margin-left:250px;margin-top:80px;padding:2rem;min-height:calc(100vh - 80px);background-color:var(--bg)}
+.dashboard-header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px}
+.dashboard-title{font-size:2rem;color:var(--primary);margin:0}
+.dashboard-sub{margin:4px 0 0;color:var(--muted);}
+.header-actions{display:flex;gap:8px}
+
+/* Buttons */
+.btn{font-weight:600;padding:10px 14px;border-radius:999px;border:0;cursor:pointer}
+.btn-primary{background: hsl(160,60%,45%); color:white; border:none; padding:10px 16px; border-radius:50px; box-shadow:0 6px 18px rgba(20,184,166,0.08); transition:all 0.25s ease}
+.btn-primary:hover{background:hsl(160,60%,40%);transform:translateY(-2px)}
+.btn-outline{background:transparent;border:2px solid hsl(160,30%,85%);}
+.btn-sm{padding:6px 10px;border-radius:8px}
+.btn-ghost{background:transparent;border:1px dashed rgba(0,0,0,0.06);padding:12px;border-radius:8px}
+
+/* Stats grid */
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:20px}
+.card{background:var(--card-bg);border-radius:var(--radius);padding:16px;border:1px solid rgba(15,23,42,0.04);box-shadow:0 6px 18px rgba(15,23,42,0.06);transition:all 0.22s ease;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(15,23,42,0.08)}
+
+/* subtle light-green accent at the top of dashboard cards */
+.dashboard-main .card:not(.quick-action-item)::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 56px; /* larger band that overlaps the title area */
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  background: var(--card-accent-start);
+  box-shadow: inset 0 -1px 0 var(--card-accent-border);
+  pointer-events: none;
+  z-index: 0; /* accent sits behind the text, but large enough to 'cover' the title background */
+}
+
+/* place the card title above the band and make it white for contrast */
+.dashboard-main .card:not(.quick-action-item) .card-title{
+  position: relative;
+  z-index: 2;
+  color: var(--primary) !important; /* match Medicines title color */
+  margin-top: 8px; /* nudge so it visually sits inside the band */
+  font-weight:700;
+}
+
+/* Prevent card content from overlapping the title/band: add a little extra top padding */
+.dashboard-main .card:not(.quick-action-item){
+  padding-top: 22px; /* base padding is 16px; increase to keep content clear of band */
+}
+
+.stats-grid .card .stat-body{ padding-top: 6px; }
+
+/* ensure main card content still renders above the accent */
+.dashboard-main .card .stat-body,
+.dashboard-main .card .urgent-list,
+.dashboard-main .card .actions-list{
+  position: relative;
+  z-index: 2;
+}
+.stat{display:flex;justify-content:space-between;align-items:center}
+.stat .stat-icon{display:none}
+.stat-body .muted{color:var(--muted);margin:0}
+.stat-value{font-size:1.75rem;color:var(--primary);margin:6px 0}
+.stat-change{font-size:0.9rem;color:#0f766e}
+.stat-icon{background:linear-gradient(180deg,hsl(160,60%,96%),hsl(160,60%,90%));color:hsl(160,60%,25%);width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+
+/* Grid sections */
+.grid-grid{display:grid;grid-template-columns:2fr 1fr;gap:16px;margin-bottom:20px}
+.large{min-height:180px}
+.small{min-height:180px}
+.card-title{font-weight:700;margin:0 0 12px;color:var(--primary)}
+
+.urgent-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+.urgent-item{display:flex;justify-content:space-between;align-items:center;padding:12px;border-radius:10px;border:1px solid rgba(0,0,0,0.04);}
+.urgent-item .muted{font-size:0.9rem;color:var(--muted)}
+.urgent-item.critical{background:linear-gradient(90deg,#fff6f6,#fff2f2);border-color:#fcdcdc}
+.urgent-item.warning{background:linear-gradient(90deg,#fff7f0,#fff9f3);border-color:#ffe8d6}
+.badge{padding:6px 10px;border-radius:999px;font-weight:700}
+.badge.critical{background:#fca5a5;color:white} /* lighter red */
+.badge.warning{background:#fdbb74;color:white} /* lighter orange */
+
+/* Buttons inside urgent items: make Find Match / Edit feel connected but subtle */
+.urgent-item .btn-sm{ padding:6px 10px; border-radius:8px; font-weight:700 }
+.urgent-item.critical .btn-sm{ background: #fff4f4; border:1px solid #fed7d7; color:#9f1a1a }
+.urgent-item.critical .btn-sm:hover{ background:#ffecec }
+.urgent-item.warning .btn-sm{ background: #fff7f2; border:1px solid #ffe6c7; color:#9a3b0a }
+.urgent-item.warning .btn-sm.btn-outline{ background:transparent; color:var(--muted); border:1px solid rgba(0,0,0,0.06) }
+.urgent-item.warning .btn-sm.btn-outline:hover{ background:#fff7f2 }
+.urgent-right{display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+
+.actions-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.action{padding:10px;border-radius:8px;border:1px solid rgba(15,23,42,0.06);display:flex;justify-content:space-between;background:hsl(210,20%,98%)}
+.pill{background:#f3f4f6;padding:4px 8px;border-radius:999px}
+
+.chart{min-height:260px}
+.chart-placeholder{display:flex;align-items:center;justify-content:center;height:220px;border-radius:12px;background: linear-gradient(180deg,#ffffff,#f7fafc);color:var(--muted);border:1px solid rgba(15,23,42,0.04);box-shadow:0 6px 18px rgba(15,23,42,0.04)}
+
+.quick-actions{
+  /* Responsive grid for the four quick-action cards */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 14px;
+  align-items: stretch;
+}
+
+/* Individual quick-action card */
+.quick-action-item{
+  padding: 12px;
+  border-radius: 12px;
+  background: linear-gradient(180deg,#ffffff,#f7fafc);
+  border: 1px solid rgba(15,23,42,0.04);
+  box-shadow: 0 6px 18px rgba(15,23,42,0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 84px;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.quick-action-item:hover{ transform: translateY(-6px); box-shadow: 0 12px 30px rgba(15,23,42,0.06); border-color: rgba(15,23,42,0.06); }
+
+/* Button inside quick-action — keep it simple and icon-friendly */
+.quick-action-item .btn-ghost,
+.quick-action-item .dash-action-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: var(--primary);
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.quick-action-item .btn-ghost:focus,
+.quick-action-item .dash-action-btn:focus{ outline: 3px solid rgba(20,184,166,0.12); outline-offset: 2px; }
+
+/* Icon bubble if JS injects .btn-icon */
+.quick-action-item .btn-icon{
+  display:inline-grid;place-items:center;
+  width:38px;height:38px;border-radius:10px;
+  background: var(--card-accent-start); color: var(--primary); font-weight:800; font-size:1.05rem;
+}
+
+/* Label styling when JS wraps text into .btn-label */
+.quick-action-item .btn-label{ font-weight:700; color:var(--primary); }
+
+/* Responsive breakpoints for smaller viewports */
+@media (max-width: 900px){
+  .quick-actions{ grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px){
+  .quick-actions{ grid-template-columns: 1fr; }
+  .quick-action-item{ min-height:72px }
+}
+
+/* contrib graph container styling to match modern card look */
+.contrib-graph, .chart-placeholder .contrib-graph{
+  width:100%;
+  padding:12px;
+  border-radius:8px;
+  background: transparent;
+}
+
+/* Weekday labels: align exactly with grid cell rows */
+.contrib-week-labels{ display:flex; flex-direction:column; gap:6px; width:44px; padding-top:7px; box-sizing:border-box; }
+.contrib-week-labels .day{ height:12px; line-height:12px; transform: translateY(2px); margin:0; padding:0 8px 0 0; text-align:right; font-size:12px; color:var(--muted); }
+
+/* Responsive */
+@media (max-width: 900px){
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .grid-grid{grid-template-columns:1fr}
+  .dashboard-main{padding:16px}
+}
+
+@media (max-width: 480px){
+  .stats-grid{grid-template-columns:1fr}
+  .header-actions{flex-direction:column}
+}
