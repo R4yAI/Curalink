@@ -3,12 +3,13 @@
   --base-color: white;
   --text-color: #2e2b41;
   --input-color: #f3f0ff;
+
+  --error-color: #f06272;
 }
 
-/* html{
-  color: var(--text-color);
-  text-align: center;
-}*/
+/* ---------------------------
+   PAGE LAYOUT
+---------------------------- */
 .login-signup-body {
   min-height: 100vh;
   background-image: url(/images/cover.jpg);
@@ -16,6 +17,7 @@
   background-position: right;
   overflow: hidden;
 }
+
 .form-wrapper {
   box-sizing: border-box;
   background-color: var(--base-color);
@@ -23,113 +25,160 @@
   width: max(40%, 600px);
   padding: 10px;
   border-radius: 0 20px 20px 0;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
 h1 {
   font-size: 3rem;
   font-weight: 900;
   text-transform: uppercase;
 }
+
+/* ---------------------------
+   FORM LAYOUT
+---------------------------- */
 .login-signup-form {
   width: min(400px, 100%);
   margin-top: 20px;
   margin-bottom: 50px;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  gap: 18px; /* more spacing for error messages */
 }
-.login-signup-form > div {
+
+/* Each input group */
+.form-group {
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
+
+/* The row containing label + input */
+.form-group .input-row {
+  display: flex;
+}
+
+/* Label box */
 .login-signup-form label {
   flex-shrink: 0;
   height: 50px;
   width: 50px;
+
   background-color: var(--accent-color);
   fill: var(--base-color);
   color: var(--base-color);
+
   border-radius: 10px 0 0 10px;
+
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+
   font-size: 1.5rem;
-  font-weight: 500;
 }
+
+/* Input */
 .login-signup-form input {
-  box-sizing: border-box;
   flex-grow: 1;
   min-width: 0;
   height: 50px;
   padding: 1em;
-  font: inherit;
+
   border-radius: 0 10px 10px 0;
   border: 2px solid var(--input-color);
   border-left: none;
   background-color: var(--input-color);
+
+  font: inherit;
+  color: var(--text-color);
+
   transition: 150ms ease;
 }
+
 .login-signup-form input:hover {
   border-color: var(--accent-color);
 }
+
 .login-signup-form input:focus {
   outline: none;
   border-color: var(--text-color);
 }
-.login-signup-form div:has(input:focus) > label {
-  background-color: var(--text-color);
-}
+
 .login-signup-form input::placeholder {
   color: var(--text-color);
 }
+
+/* ---------------------------
+   ERROR STATE (from JS)
+---------------------------- */
+
+/* red highlight on group */
+.form-group.error label {
+  background-color: var(--error-color);
+}
+
+.form-group.error input {
+  border-color: var(--error-color);
+}
+
+/* error text */
+.error-msg {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: var(--error-color);
+
+  min-height: 16px; /* prevents layout jumping */
+}
+
+/* ---------------------------
+   BUTTON
+---------------------------- */
 .login-signup-form button {
   margin-top: 10px;
   border: none;
   border-radius: 1000px;
   padding: 0.85em 4em;
+
   background-color: var(--accent-color);
   color: var(--base-color);
+
   font: inherit;
   font-weight: 600;
   text-transform: uppercase;
+
   cursor: pointer;
   transition: 150ms ease;
 }
-.login-signup-form button:hover {
-  background-color: var(--text-color);
-}
+
+.login-signup-form button:hover,
 .login-signup-form button:focus {
-  outline: none;
   background-color: var(--text-color);
+  outline: none;
 }
+
+/* ---------------------------
+   LINKS
+---------------------------- */
 a {
   text-decoration: none;
   color: var(--accent-color);
 }
+
 a:hover.decorated {
   text-decoration: underline;
 }
+
+/* ---------------------------
+   RESPONSIVE
+---------------------------- */
 @media (max-width: 1100px) {
   .form-wrapper {
     width: min(600px, 100%);
     border-radius: 0;
   }
-}
-.login-signup-form div.error label {
-  background-color: #f06272;
-}
-.login-signup-form div.error input {
-  border-color: #f06272;
-}
-#error-msg {
-  color: #f06272;
-}
-
-.error {
-  color: #f06272;
 }
