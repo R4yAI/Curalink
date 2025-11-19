@@ -1,20 +1,26 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <link rel="stylesheet" href="/src/css/style.css" />
-  <link rel="stylesheet" href="/src/css/components/Dashboard.css" />
+    <link rel="stylesheet" href="/src/css/components/Dashboard.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+
     <script defer src="/src/JS/highlightnav.js"></script>
     <script defer src="/src/JS/sidebarActive.js"></script>
-  <script defer src="/src/JS/Dashbored.js"></script>
+    <script defer src="/src/JS/Dashbored.js"></script>
+
+    <!-- ⭐ Chart.js added -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
     <title>Requests</title>
   </head>
 
@@ -23,14 +29,8 @@
       <nav class="navbar">
         <a class="logo">LOGO</a>
         <ul class="navbar-menu">
-          <li class="navbar-item">
-            <a class="navbar-link" href="/index.html">Home</a>
-          </li>
-          <li class="navbar-item">
-            <a class="navbar-link" href="/src/pages/Dashboard.html"
-              >Dashboard</a
-            >
-          </li>
+          <li class="navbar-item"><a class="navbar-link" href="/index.html">Home</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="/src/pages/Dashboard.html">Dashboard</a></li>
           <li class="navbar-item"><a class="navbar-link">About</a></li>
           <li class="navbar-item"><a class="navbar-link">Contact</a></li>
         </ul>
@@ -40,24 +40,12 @@
 
     <nav class="sidebar">
       <ul class="sidebar-menu">
-        <li class="sidebar-item">
-          <a class="sidebar-link" href="/src/pages/Dashboard.html">Dashboard</a>
-        </li>
-        <li class="sidebar-item">
-          <a class="sidebar-link" href="/src/pages/Medicines.html">Medicines</a>
-        </li>
-        <li class="sidebar-item">
-          <a class="sidebar-link" href="/src/pages/Requests.html">Requests</a>
-        </li>
-        <li class="sidebar-item">
-          <a class="sidebar-link" href="/src/pages/Community.html">Community</a>
-        </li>
-        <li class="sidebar-item">
-          <a class="sidebar-link" href="/src/pages/Messages.html">Messages</a>
-        </li>
-        <li class="sidebar-item">
-          <a class="sidebar-link" href="/src/pages/Profile.html">Profile</a>
-        </li>
+        <li class="sidebar-item"><a class="sidebar-link" href="/src/pages/Dashboard.html">Dashboard</a></li>
+        <li class="sidebar-item"><a class="sidebar-link" href="/src/pages/Medicines.html">Medicines</a></li>
+        <li class="sidebar-item"><a class="sidebar-link" href="/src/pages/Requests.html">Requests</a></li>
+        <li class="sidebar-item"><a class="sidebar-link" href="/src/pages/Community.html">Community</a></li>
+        <li class="sidebar-item"><a class="sidebar-link" href="/src/pages/Messages.html">Messages</a></li>
+        <li class="sidebar-item"><a class="sidebar-link" href="/src/pages/Profile.html">Profile</a></li>
       </ul>
 
       <div class="sidebar-footer">
@@ -66,123 +54,156 @@
             <span class="theme-icon material-symbols-rounded">dark_mode</span>
             <span class="theme-text">Dark Mode</span>
           </div>
-          <div class="theme-toggle-track">
-            <div class="theme-toggle-indicator"></div>
-          </div>
+          <div class="theme-toggle-track"><div class="theme-toggle-indicator"></div></div>
         </button>
       </div>
     </nav>
 
-    
-
-
-<main class="dashboard-main">
-    <header class="dashboard-header">
-      <div>
-        <h1 class="dashboard-title">Welcome back, John! 👋</h1>
-        <p class="dashboard-sub">Here's what's happening with your donations today.</p>
-      </div>
-      <div class="header-actions">
-        <button class="btn btn-primary">Add Medicine</button>
-        <button class="btn btn-outline">Create Request</button>
-      </div>
-    </header>
-
-    <section class="stats-grid" aria-label="Summary stats">
-      <article class="card stat">
-        <div class="stat-body">
-          <p class="muted">Total Donations</p>
-          <h2 class="stat-value">24</h2>
-          <p class="stat-change">+3 this week</p>
+    <main class="dashboard-main">
+      <header class="dashboard-header">
+        <div>
+          <h1 class="dashboard-title">Welcome back, John! 👋</h1>
+          <p class="dashboard-sub">Here's what's happening with your donations today.</p>
         </div>
-        <div class="stat-icon"></div>
-      </article>
 
-      <article class="card stat">
-        <div class="stat-body">
-          <p class="muted">Requests Fulfilled</p>
-          <h2 class="stat-value">18</h2>
-          <p class="stat-change">+2 this week</p>
+        <div class="header-actions">
+          <button class="btn btn-primary">Add Medicine</button>
+          <button class="btn btn-outline">Create Request</button>
         </div>
-        <div class="stat-icon"></div>
-      </article>
+      </header>
 
-      <article class="card stat">
-        <div class="stat-body">
-          <p class="muted">Lives Impacted</p>
-          <h2 class="stat-value">42</h2>
-          <p class="stat-change">+5 this week</p>
+      <!-- Stats -->
+      <section class="stats-grid" aria-label="Summary stats">
+        <article class="card stat">
+          <div class="stat-body">
+            <p class="muted">Total Donations</p>
+            <h2 class="stat-value">24</h2>
+            <p class="stat-change">+3 this week</p>
+          </div>
+        </article>
+
+        <article class="card stat">
+          <div class="stat-body">
+            <p class="muted">Requests Fulfilled</p>
+            <h2 class="stat-value">18</h2>
+            <p class="stat-change">+2 this week</p>
+          </div>
+        </article>
+
+        <article class="card stat">
+          <div class="stat-body">
+            <p class="muted">Lives Impacted</p>
+            <h2 class="stat-value">42</h2>
+            <p class="stat-change">+5 this week</p>
+          </div>
+        </article>
+
+        <article class="card stat">
+          <div class="stat-body">
+            <p class="muted">Impact Score</p>
+            <h2 class="stat-value">850</h2>
+            <p class="stat-change">Trusted Donor</p>
+          </div>
+        </article>
+      </section>
+
+      <!-- Urgent / Pending -->
+      <section class="grid-grid">
+        <div class="card large">
+          <h3 class="card-title">Urgent: Expiring Medicines</h3>
+          <ul class="urgent-list">
+            <li class="urgent-item critical">
+              <div class="urgent-left">
+                <strong>Amoxicillin 500mg</strong>
+                <div class="muted">20 capsules • Expires 2025-10-12</div>
+              </div>
+              <div class="urgent-right">
+                <span class="badge critical">4 days</span>
+                <button class="btn-sm">Find Match</button>
+              </div>
+            </li>
+
+            <li class="urgent-item warning">
+              <div class="urgent-left">
+                <strong>Insulin Glargine</strong>
+                <div class="muted">2 vials • Expires 2025-10-18</div>
+              </div>
+              <div class="urgent-right">
+                <span class="badge warning">10 days</span>
+                <button class="btn-sm btn-outline">Edit</button>
+              </div>
+            </li>
+          </ul>
         </div>
-        <div class="stat-icon"></div>
-      </article>
 
-      <article class="card stat">
-        <div class="stat-body">
-          <p class="muted">Impact Score</p>
-          <h2 class="stat-value">850</h2>
-          <p class="stat-change">Trusted Donor</p>
+        <aside class="card small">
+          <h3 class="card-title">Pending Actions</h3>
+          <ul class="actions-list">
+            <li class="action">Request Match Available <span class="pill">3</span></li>
+            <li class="action">Delivery Pending <span class="pill">2</span></li>
+            <li class="action">Unread Messages <span class="pill">5</span></li>
+          </ul>
+        </aside>
+      </section>
+
+      <!-- ⭐ ADDED: Real Chart -->
+      <section class="card chart">
+        <h3 class="card-title">Donation Activity</h3>
+        <div class="chart-container" style="height: 300px;">
+          <canvas id="activityChart"></canvas>
         </div>
-        <div class="stat-icon"></div>
-      </article>
-    </section>
+      </section>
 
-    <section class="grid-grid">
-      <div class="card large">
-        <h3 class="card-title">Urgent: Expiring Medicines</h3>
-        <ul class="urgent-list">
-          <li class="urgent-item critical">
-            <div class="urgent-left">
-              <strong>Amoxicillin 500mg</strong>
-              <div class="muted">20 capsules • Expires 2025-10-12</div>
-            </div>
-            <div class="urgent-right">
-              <span class="badge critical">4 days</span>
-              <button class="btn-sm">Find Match</button>
-            </div>
-          </li>
-          <li class="urgent-item warning">
-            <div class="urgent-left">
-              <strong>Insulin Glargine</strong>
-              <div class="muted">2 vials • Expires 2025-10-18</div>
-            </div>
-            <div class="urgent-right">
-              <span class="badge warning">10 days</span>
-              <button class="btn-sm btn-outline">Edit</button>
-            </div>
-          </li>
-        </ul>
-      </div>
+      <section class="quick-actions">
+        <div class="card quick-action-item"><button class="btn-ghost">＋ Add Medicine</button></div>
+        <div class="card quick-action-item"><button class="btn-ghost">✉ New Request</button></div>
+        <div class="card quick-action-item"><button class="btn-ghost">💬 Messages</button></div>
+        <div class="card quick-action-item"><button class="btn-ghost">📅 Events</button></div>
+      </section>
+    </main>
 
-      <aside class="card small">
-        <h3 class="card-title">Pending Actions</h3>
-        <ul class="actions-list">
-          <li class="action">Request Match Available <span class="pill">3</span></li>
-          <li class="action">Delivery Pending <span class="pill">2</span></li>
-          <li class="action">Unread Messages <span class="pill">5</span></li>
-        </ul>
-      </aside>
-    </section>
+    <!--  Chart.js Script -->
+    <script>
+      const ctx = document.getElementById('activityChart').getContext('2d');
 
-    <section class="card chart">
-      <h3 class="card-title">Donation Activity</h3>
-      <div class="chart-placeholder">
-        <!-- Contribution-style activity grid. Set dates as comma-separated ISO strings in data-donations, e.g. data-donations="2025-11-01,2025-11-05" -->
-    <div class="contrib-graph" data-donations=""></div>
-      </div>
-    </section>
-
-    <section class="quick-actions">
-      <div class="card quick-action-item"><button class="btn-ghost">＋ Add Medicine</button></div>
-      <div class="card quick-action-item"><button class="btn-ghost">✉ New Request</button></div>
-      <div class="card quick-action-item"><button class="btn-ghost">💬 Messages</button></div>
-      <div class="card quick-action-item"><button class="btn-ghost">📅 Events</button></div>
-    </section>
-  </main>
-
-
-
-  
-
-
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov'],
+          datasets: [
+            {
+              label: 'Donations',
+              data: [12, 19, 15, 25, 22, 30, 28, 35, 32, 38, 42],
+              borderColor: 'hsl(160, 60%, 35%)',
+              backgroundColor: 'hsla(160, 60%, 35%, 0.1)',
+              borderWidth: 3,
+              tension: 0.4,
+              fill: true,
+              pointRadius: 4,
+              pointHoverRadius: 6
+            },
+            {
+              label: 'Requests',
+              data: [8, 14, 11, 18, 16, 22, 20, 28, 25, 30, 35],
+              borderColor: 'hsl(200, 70%, 50%)',
+              backgroundColor: 'hsla(200, 70%, 50%, 0.1)',
+              borderWidth: 3,
+              tension: 0.4,
+              fill: true,
+              pointRadius: 4,
+              pointHoverRadius: 6
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            y: { beginAtZero: true },
+            x: {}
+          }
+        }
+      });
+    </script>
   </body>
 </html>
