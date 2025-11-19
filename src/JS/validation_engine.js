@@ -50,7 +50,7 @@ function validateField(input) {
   }
 
   // Show / clear error
-  const errorEl = input.parentElement.querySelector(".error-msg");
+  const errorEl = input.closest(".form-group").querySelector(".error-msg");
   if (errorMessage) {
     input.classList.add("error");
     if (errorEl) errorEl.textContent = errorMessage;
