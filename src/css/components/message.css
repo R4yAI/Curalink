@@ -1,6 +1,6 @@
 .chat-fram{
   position: fixed;
-  top: 150px;          
+  top: 200px;          
   left: 300px;         
   right: 20px;         
   height: 500px;
@@ -14,25 +14,28 @@
    flex-wrap: wrap;
 }
 
-
 .top-des{
     display: flex;
     position: relative;
     left:300px;
-    top:70px;
+    top:80px;
     gap:15px;
 
 }
 .text h2{
     margin-bottom: 5px;
 }
-.message_pic{
-  border-radius: 50%; 
-    text-align: center;
-    width: 50px;     
-    height: 50px;
-    overflow: hidden;   /* coupe ce qui dépasse du rond */
-    align-self: center; 
+#message_Icon{
+  color:white;
+background: linear-gradient(
+  135deg,
+  hsl(240, 65%, 64%) 0%,
+  hsl(242, 91%, 57%) 50%,
+  hsl(238, 65%, 39%) 100%
+);
+font-size: 20px;
+padding:15px;
+border-radius: 50%;
 }
 
 .contact-container {
@@ -43,12 +46,11 @@ display: flex;
 flex-direction: column;
 border-top-left-radius: 20px;
 border-bottom-left-radius: 20px;
-border: 2px solid rgba(132, 132, 132, 0.4);
+border: 1px solid rgba(132, 132, 132, 0.4);
 padding: 5px;
 
 }
 .contact-search{
-border-bottom: 2px solid rgba(132, 132, 132, 0.4);
 padding-bottom: 20px;
 padding-left:20px;
 padding-top:10px ;
@@ -59,22 +61,20 @@ width: 100%;
 padding:10px;
 border: 2px solid hsl(162, 60%, 42%);
 border-radius: 20px;
-
-
-}
-
-#contactSearch:focus{
-box-shadow: 1px 1px 4px  hsl(162, 66%, 33%);
-border: 2px solid hsl(162, 60%, 42%);
+border-color: hsl(162, 60%, 42%);
 
 }
 
-
-#contactSearch:active{
-box-shadow: 1px 1px 4px  hsl(162, 66%, 33%);
-border: 2px solid hsl(162, 60%, 42%);
-
+input:hover{
+  box-shadow: 2px 2px 4px hsl(162, 66%, 33% , 0.4);
+    border: 2px solid hsl(162, 60%, 42%);
 }
+input:focus{
+box-shadow: 1px 1px 4px hsl(162, 66%, 33% , 0.4);
+    border: 4px  hsl(162, 60%, 42% , 0.4);
+    outline: none; 
+}
+
 .contacts-frame{
 border-top: 2px solid rgba(132, 132, 132, 0.4);
 display: flex;
@@ -84,7 +84,6 @@ padding-top: 20px;
 }
 
 .contact{
-
     display: flex;
     flex-direction: row;
     padding: 10px 5px;
@@ -120,7 +119,11 @@ padding-top: 20px;
 
 }
 .chiffre{
-    background-color :rgba(95, 158, 160, 0.562);
+    background :linear-gradient(
+    90deg,
+    hsl(155, 67%, 45%) 0%,
+    hsl(172, 65%, 39%) 100%
+  );
     color: white;
     border-radius:50%;
     padding:5px;
@@ -133,6 +136,7 @@ padding-top: 20px;
 background-color: rgba(212, 228, 212, 0.429);
 box-shadow: 1px 2px 6px rgba(40, 40, 40, 0.4);
 border-radius: 20px;
+cursor: pointer;
 }
 
 .contact.selected {
@@ -163,24 +167,36 @@ padding:3px 10px;
 position: relative;
 }
 
-.left{
+.top_left{
     font-size: 15px;
-    
+    text-align: center;
+    padding-top: 10px;
 }
-.right{
+.top_right{
     display:flex;
     flex-direction: row;
     padding-right:10px;
     padding-top: 5px;
-    gap: 20px;
+    gap: 15px;
 
 }
-
-
+.receiver_name{
+  display:none;
+}
+.receiver_name.active{
+    display: block;
+}
 .body-conversation{
-position:relative;
-
+  margin-top: 5px;
+   position:relative;
+   height: 300px;       /* fixed height */
+    overflow-y: auto;
+     display: none;
 }
+.body-conversation.active {
+  display: block;
+}
+
 .send_message {
   padding: 8px 12px;
   margin: 5px 0;
@@ -190,8 +206,8 @@ position:relative;
   display: flex;
   align-items: center;
   position:sticky;
-  left: 90%;
- right:0px;
+  left: 92%;
+  
 }
 
 .received_message{
@@ -255,7 +271,7 @@ text-align: left;
 }
 .message-box.selected{
 
-    box-shadow: 1px 2px 6px rgba(40, 40, 40, 0.4);
+    box-shadow: -2px 2px 6px hsl(162, 60%, 42%);
     
     border: 2px solid hsl(162, 60%, 42%);
 }
@@ -269,7 +285,6 @@ position:relative;
 }
 #toggleBtn{
     display: none;
-
 }
 #iconPanel {
    display: none;
@@ -287,7 +302,6 @@ position:relative;
 
 .bottom-right{
     display:block;
-
 }
 
 .icon-btn,.icon-btn-send , .icon{
@@ -312,11 +326,15 @@ display: none;
 
 #addFile { 
   display: none;
-  background-color: hsl(162, 60%, 70%, 0.4);
+  background:linear-gradient(
+    90deg,
+    hsl(155, 67%, 45% , 0.3) 0%,
+    hsl(172, 65%, 39%, 0.3) 100%
+  );
   border-radius: 10px;
-  width: 170px;
+  width: fit-content;
   height: 100px;
-  padding: 10px;
+  padding: 7px;
   color:black;
   bottom: 65px;
   position:absolute;
@@ -324,10 +342,14 @@ display: none;
 .file-btn {
   display: inline-block;
   padding: 8px 12px;
-  background: hsl(162, 60%, 70%);
+  background:linear-gradient(
+    90deg,
+    hsl(155, 67%, 45%) 0%,
+    hsl(172, 65%, 39%) 100%
+  );
   border-radius: 10px;
   cursor: pointer;
-  color: black;
+  color: white;
 }
 
 .icon-btn:hover{
@@ -432,76 +454,5 @@ cursor: pointer;
     left: 10px;
     width: 100%;
    }
-   .contact-info{
-    padding-top:10px;
-    text-align: center;
-   }
-   .contact-info p{
-    display:none;
-   } 
-    .contact-info h2{
-        font-size: 13px;
-    }
-   .chat-info{
-    display:none;
-   }
-   /* Pied de conversation : tout sur une ligne fluide */
-  .bottom-conversation {
-    gap: 5px;
-    padding: 6px;
-  }
-
-  /* Les icônes rétrécissent */
-  .bottom-left button,
-  .right button {
-    transform: scale(0.8);
-  }
-
-  /* La zone de texte prend TOUT l’espace */
-  .bottom-middle {
-    width: 90%;
-    margin: 0 5px; 
-    flex: 1;
-  }
-
-  .message-box {
-    max-width: 100%;
-    width: 100%;
-   max-width: 200px;
-  }
-
-  .send_message {
-    margin-right:10px;
-  }
-   /* le panel vertical quand on active */
-  #iconPanel.active {
-      display: flex;
-      margin-bottom: 3px;
-     box-shadow:0 0 0 rgb(255, 255, 255 , 0.5);
-     gap:0px;
-     padding: 0 0;
-    
-  }
-
-#toggleBtn{
-display: block;
-background: none;
-border: none;
-font-size: 22px;
-cursor: pointer;
-box-shadow: none;
-color:  hsl(162, 66%, 33%);
-cursor: pointer; 
-
-}
-
-  #toggleBtn:hover{
-    box-shadow: 1px 1px 4px  hsl(162, 66%, 33%);
-
-}
-
-  .bottom-left .icon-btn:not(#toggleBtn) {
-      display: none;
-  }
-
+   
 }

@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   padding: 10px;
-   padding-right: 30px; 
+  padding-right: 30px; 
   gap: 20px;
   position: relative;
   bottom: 0;
@@ -15,39 +15,77 @@
 }
 .statistics{
     display: flex;
-    padding:20px;
-     padding-right: 0px; 
-    right:0;  
-    flex-direction:row;
-    gap:25px; 
-    border-radius: 12px;
-    position: relative;
- 
+    gap: 25px;
+    padding: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;          /* permet de s'adapter si l'espace manque */
 }
+
 
 .stat-card{
-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.15);
- background-color: var(--color-bg-white);
-width:200px;
-padding: 15px 20px;
-border-radius: 20px;
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-between;
-border-radius: 12px;
-position: relative;
-width: 100%;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.15);
+    background-color: var(--color-bg-white);
+    width: 30%;               /* 3 cards par ligne */
+    min-width: 200px;         /* évite qu'elles deviennent trop petites */
+    padding: 20px 25px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.stat-label {
+    font-size: 0.95rem;
+    color: #777;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#favorite{
+   background: linear-gradient(
+    90deg,
+    hsl(155, 67%, 45%) 0%,
+    hsl(172, 65%, 39%) 100%
+  );
+  color:white;
+  border-radius: 10px;
+  padding: 10px;
+}
+.stat-value.ch24{
+  color: hsl(172, 65%, 39% ) ;
 
 }
- .stat-label {
-            font-size: 0.9rem;
-            color: #666;
+#deployed_code{
+   background: linear-gradient(
+    90deg,
+    hsl(297, 35%, 42%) 0%,
+    hsl(303, 65%, 39%) 100%
+  );
+  color:white;
+  border-radius: 10px;
+  padding: 10px;
 }
-        
-.stat-value {
-            font-size: 1.5rem;
-            font-weight: bold;
+.stat-value.ch18{
+    color: hsl(303, 65%, 39%) ;
+}
+
+#star{
+  background: linear-gradient(
+    90deg,
+    hsl(50, 78%, 66%) 0%,
+    hsl(46, 65%, 39%) 100%
+  );
+  color:white;
+  border-radius: 10px;
+  padding: 10px;
+}
+.stat-value.ch49{
+    color: hsl(50, 55%, 60%) ;
+
 }
 
 .Recent-Donations{
@@ -57,6 +95,20 @@ width: 100%;
     margin-left: 25px;
     border-radius: 10px;
 
+}
+.Recent-Donations h2{
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 15px;
+}
+.donation-info h3{
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 15px;
 }
 
 .donation-info{
@@ -93,8 +145,19 @@ width: 100%;
   padding: 4px 10px;
   border-radius: 12px;
 }
+.status.complete {
+  background-color: #e8f5e9;
+  color: #4CAF50;
+}
+        
+.status.in-progress {
+  background-color: #fff3e0;
+  color: #ff9800;
+}
+
+
 .medicament-cart{
-background-color: rgb(246, 245, 244);
+  background-color: rgba(179, 188, 185, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -103,7 +166,7 @@ background-color: rgb(246, 245, 244);
   margin-bottom: 15px;
   margin-top: 20px;
   border-bottom: 1px solid #eee;
-  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.15);
+  
 }
 
 .Recent-Reviews{
@@ -117,24 +180,28 @@ background-color: rgb(246, 245, 244);
     gap:20px;
 
 }
- .complete {
-            background-color: #e8f5e9;
-            color: #4CAF50;
+.Recent-Reviews h2{
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 15px;
 }
-        
-.in-progress {
-            background-color: #fff3e0;
-            color: #ff9800;
+.reviews-block h4{
+   font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 6px;
 }
-
 .reviews-block {
 display: flex;
 flex-direction:row;
-background-color: rgb(246, 245, 244);
- box-shadow: 0 3px 9px rgba(0, 0, 0, 0.15);
+background-color: rgba(179, 188, 185, 0.1);
  justify-content: space-between;
  border-radius: 20px;
  padding: 15px;
+
 }
 
 .reviews-rating{
@@ -148,6 +215,22 @@ p ,
 h5{
   color:#666;
      margin-bottom: 0.5rem;
+}
+#Star{
+  color: hsl(50, 55%, 60%) ;
+}
+
+.stat-card:hover{
+  box-shadow: 3px -3px 10px rgba(0, 0, 0, 0.15);
+  
+}
+
+.medicament-cart:hover{
+  box-shadow: 3px -3px 10px rgba(0, 0, 0, 0.15);
+
+}
+.reviews-block:hover{
+    box-shadow: 3px -3px 10px rgba(0, 0, 0, 0.15);
 }
 
 
