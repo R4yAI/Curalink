@@ -15,6 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
     <script defer src="/src/JS/highlightnav.js"></script>
     <script defer src="/src/JS/sidebarActive.js"></script>
@@ -90,7 +94,7 @@
     <div class="main-content">
       <div class="top_desc">
         <div class="class profile_icon">
-          <img src="/images/téléchargement.jpg" />
+          <i class="fa-solid fa-user" id="user"></i>
         </div>
 
         <div class="text">
@@ -103,7 +107,7 @@
         <div class="personnel-info">
           <div class="personne-info-picture">
             <img
-              src="images/téléchargement.jpg"
+              src="/images/photo_profile3.jpg"
               alt="Description of the image"
             />
           </div>
@@ -192,9 +196,15 @@
           <div class="overlay" id="overlay"></div>
 
           <div>
-            <a href="ID-verification.html" class="profile-button-ele"
-              >Upload ID</a
-            >
+            <label for="uploadID" class="upload-btn">Upload ID</label>
+
+            <input
+              type="file"
+              name="uploadID"
+              id="uploadID"
+              style="display: none"
+            />
+            <p id="fileName"></p>
           </div>
         </div>
 
@@ -203,25 +213,35 @@
             <div class="stat-card">
               <div class="stat-text">
                 <div class="stat-label">Donations Made</div>
-                <div class="stat-value">24</div>
+                <div class="stat-value ch24">24</div>
               </div>
-              <div class="stat-icon"></div>
+              <div class="stat-icon">
+                <span class="material-symbols-outlined" id="favorite">
+                  favorite
+                </span>
+              </div>
             </div>
 
             <div class="stat-card">
               <div class="stat-text">
                 <div class="stat-label">Requests Fulfilled</div>
-                <div class="stat-value">18</div>
+                <div class="stat-value ch18">18</div>
               </div>
-              <div class="stat-icon"></div>
+              <div class="stat-icon">
+                <span class="material-symbols-outlined" id="deployed_code">
+                  deployed_code
+                </span>
+              </div>
             </div>
 
             <div class="stat-card">
               <div class="stat-text">
                 <div class="stat-label">Rating</div>
-                <div class="stat-value">4.9</div>
+                <div class="stat-value ch49">4.9</div>
               </div>
-              <div class="stat-icon">$$$</div>
+              <div class="stat-icon">
+                <i class="fa-solid fa-star" id="star"></i>
+              </div>
             </div>
           </div>
 
@@ -230,21 +250,21 @@
             <div class="medicament-cart">
               <div class="donation-info">
                 <h3>paracetamol</h3>
-                <p>Lydia</p>
+                <p>Lydia chabni</p>
               </div>
               <div class="donation-meta">
-                <span span class="date">15-01-2025</span>
+                <span class="date">15-01-2025</span>
                 <span class="status complete">complete</span>
               </div>
             </div>
 
             <div class="medicament-cart">
               <div class="donation-info">
-                <h3>insulin hhhhhhhhh</h3>
-                <p>Iman</p>
+                <h3>insulin</h3>
+                <p>Iman Ayad</p>
               </div>
               <div class="donation-meta">
-                <span span class="date">12-12-2026</span>
+                <span class="date">12-12-2026</span>
                 <span class="status complete">complete</span>
               </div>
             </div>
@@ -252,10 +272,10 @@
             <div class="medicament-cart">
               <div class="donation-info">
                 <h3>vitamin</h3>
-                <p>Rayan</p>
+                <p>Rayan Ouali</p>
               </div>
               <div class="donation-meta">
-                <span span class="date">7-11-2025</span>
+                <span class="date">7-11-2025</span>
                 <span class="status in-progress">in progress</span>
               </div>
             </div>
@@ -263,17 +283,17 @@
             <div class="medicament-cart">
               <div class="donation-info">
                 <h3>blood</h3>
-                <p>Yacine</p>
+                <p>Yacine Laghinona</p>
               </div>
               <div class="donation-meta">
-                <span span class="date">16-10-2025</span>
+                <span class="date">16-10-2025</span>
                 <span class="status complete">complete</span>
               </div>
             </div>
           </div>
 
           <div class="Recent-Reviews">
-            <h3>Recent Reviews</h3>
+            <h2>Recent Reviews</h2>
             <div class="reviews-block">
               <div class="reviews-information">
                 <h4>Sarah Micthell</h4>
@@ -283,7 +303,12 @@
                 </p>
                 <h5>13,oct</h5>
               </div>
-              <div class="reviews-rating">$$$$$$$</div>
+              <div class="reviews-rating">
+                <i class="fa-solid fa-star" id="Star"></i>
+                <i class="fa-solid fa-star" id="Star"></i>
+                <i class="fa-solid fa-star" id="Star"></i>
+                <i class="fa-solid fa-star" id="Star"></i>
+              </div>
             </div>
 
             <div class="reviews-block">
@@ -295,7 +320,13 @@
                 </p>
                 <h5>Oct 1, 2025</h5>
               </div>
-              <div class="reviews-rating">$$$$$$</div>
+              <div class="reviews-rating">
+                <i class="fa-solid fa-star" id="Star"></i>
+                <i class="fa-solid fa-star" id="Star"></i>
+                <i class="fa-solid fa-star" id="Star"></i>
+                <i class="fa-solid fa-star" id="Star"></i>
+                <i class="fa-solid fa-star" id="Star"></i>
+              </div>
             </div>
           </div>
         </div>
