@@ -1,0 +1,300 @@
+.layout {
+  display: grid;
+}
+
+/* main {
+  margin-top: 50px;
+  margin-left: 300px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+} */
+
+#title_image img {
+  width: 15px;
+}
+
+#title_image {
+  display: flex;
+  background-color: rgb(240, 53, 84);
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+#title {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin-bottom: 0px;
+}
+
+#title p {
+  color: black;
+  font-size: 25px;
+}
+
+#desc {
+  margin-top: 0px;
+  font-size: 13px;
+}
+.custom-select {
+  width: 220px;
+  background: white;
+  border: 1.5px solid #d7e0ea;
+  border-radius: 25px;
+  padding: 5px 10px;
+  cursor: default;
+  position: relative;
+  font-family: Montserrat, sans-serif;
+  font-size: 10px;
+}
+
+.custom-select .selected {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-select .selected::after {
+  content: "∨";
+  font-size: 12px;
+  color: gray;
+  margin-left: 10px;
+}
+
+.custom-select .options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: white;
+  border: 1.5px solid #d7e0ea;
+  border-radius: 12px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 28px;
+  display: none;
+  z-index: 50;
+}
+
+.custom-select .options.open {
+  display: block;
+}
+
+.custom-select .options li {
+  padding: 5px 10px;
+  cursor: default;
+}
+
+.custom-select .options li:hover {
+  background: #bc56ff;
+  border-radius: 8px;
+}
+
+.custom-select .options li {
+  position: relative;
+  padding-right: 25px; /* espace pour la coche */
+}
+
+.custom-select .options li.selected::after {
+  content: "✔";
+  color: gray;
+  font-weight: 300; /* plus fin */
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  pointer-events: none; /* pas cliquable */
+}
+
+#event-operations {
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  grid-auto-rows: auto;
+  align-items: start;
+  margin-bottom: 20px;
+}
+
+.create-event {
+  display: flex;
+  width: fit-content;
+  background-color: var(--color-primary);
+  border-radius: 10px;
+  padding: 10px 5px;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.create-event img {
+  width: 15px;
+}
+
+.create-event p {
+  color: white;
+  padding: 0px;
+  margin: 0px;
+  font-size: 12px;
+}
+
+.cards img {
+  width: 15px;
+}
+
+.cards {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+@media (max-width: 700px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background-color: white;
+  border: 1.5px solid #d7e0ea;
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px #c6c6c6;
+  padding: 20px 20px 5px 20px;
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
+
+.card-sign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5px;
+  width: fit-content;
+  padding: 2px 5px;
+  border-radius: 10px;
+}
+
+.card-sign p {
+  font-size: 10px;
+  font-weight: 600;
+  margin: 0px;
+}
+
+#card-sign1 {
+  border: 0.5px solid #ec9d95;
+  background-color: #ffecea;
+}
+
+#card-sign1 p {
+  color: #bb271a;
+}
+
+#card-sign2 {
+  border: 0.5px solid #a5c0f6;
+  background-color: #d4e0f8;
+}
+
+#card-sign2 p {
+  color: #0000f5;
+}
+
+#card-sign3 {
+  border: 0.5px solid #69edc6;
+  background-color: #cef5e3;
+}
+
+#card-sign3 p {
+  color: #2bab85;
+}
+
+.p1 {
+  font-size: 15px;
+  color: black;
+}
+
+.p2 {
+  font-size: 11px;
+  color: #848e9b;
+}
+
+.p3 {
+  font-size: small;
+  margin-top: 30px;
+}
+
+.card-desc {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.desc-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: #d7e0ea;
+  border-radius: 100px;
+}
+
+.card-desc p {
+  font-size: 11px;
+  color: #666666;
+}
+
+.join-share {
+  margin-top: 5px;
+  margin-bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px;
+  gap: 0px;
+}
+
+.join {
+  background-color: var(--color-primary);
+  padding: 5px 145px;
+  border-radius: 10px;
+}
+
+.join:hover {
+  opacity: 0.9;
+}
+
+.join p {
+  margin: 0px;
+  color: white;
+  font-size: 12px;
+}
+
+.share {
+  border: 2px solid #d7e0ea;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.share p {
+  margin: 0px;
+  color: black;
+  font-size: 12px;
+}
+
+.share:hover p {
+  color: white;
+}
+
+#card4 {
+  border-color: red;
+}
+
+#urgentBlood {
+  display: flex;
+  justify-content: space-between;
+}

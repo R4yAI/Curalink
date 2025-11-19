@@ -200,3 +200,10 @@ textarea {
     opacity: 1;
   }
 } */
+
+@media (max-width: 700px) {
+  .modal {
+    height: auto;
+    width: auto;
+  }
+}

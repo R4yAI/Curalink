@@ -45,19 +45,7 @@
 }
 
 @media (max-width: 1100px) {
-  .hamburger-menu {
-    display: block; /* Visible sur mobile */
-    padding-inline-end: 10px;
-  }
-
   .navbar-menu {
     display: none; /* Cache le menu principal sur mobile */
-  }
-}
-
-@media (max-width: 500px) {
-  .navbar-menu {
-    display: none;
-    padding: 10px;
   }
 }
