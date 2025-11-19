@@ -17,23 +17,31 @@
 img{
   width: 100%;
 }
+
 .top_desc{
+margin-top: 70px;
 margin-left: 20px;
-margin-top: 10px;
 display:flex;
 flex-direction: row;
 align-items: center;
+gap:10px;
 }
-.profile_icon{
-     background-color: rgb(232, 231, 231);
-    border-radius: 50%; 
-    margin: 20px;
-    margin-bottom: 0px;
-    width: 60px;     
-    height: 60px;
-    overflow: hidden;   /* coupe ce qui dépasse du rond */
-    align-self: center; /* centre dans le conteneur */ 
+.text h2{
+    margin-bottom: 10px;
+    margin-left: 10px;
 }
+#user{
+color:white;
+background: linear-gradient(
+  135deg,
+  hsl(163, 72%, 41%) 0%,
+  hsl(155, 67%, 45%) 50%,
+  hsl(172, 65%, 39%) 100%
+);
+padding:15px;
+border-radius: 50%;
+}
+
 .personne-info-picture{
     background-color: rgb(232, 231, 231);
     border-radius: 50%; 
@@ -85,7 +93,7 @@ align-items: center;
     font-weight: bold;
 }
 
-.profile-button {
+.profile-button , .upload-btn{
   background-color: #f0f0f0;
   color: rgb(0, 0, 0);
   border: none;
@@ -94,15 +102,24 @@ align-items: center;
   text-decoration: none;
   display: block;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 20px;
   margin-top: 20px;
-
+  text-align: center;
+ width: 100%;
 }
 
 
 .profile-button:hover {
-    background-color: rgb(247, 247, 247);
+    background-color:  hsl(162, 60%, 92%);;
+    letter-spacing: 2px;
+    box-shadow: rgb(236, 236, 236) 0px 7px 29px 0px;
+    transition: 100ms;
+    color: white;
+}
+.upload-btn:hover{
+        background-color: hsl(162, 60%, 92%);;
+
     letter-spacing: 2px;
     box-shadow: rgb(236, 236, 236) 0px 7px 29px 0px;
     transition: 100ms;
